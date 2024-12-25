@@ -1,0 +1,8 @@
+#property-card1{
+    background-image: url('twonhouse.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#about{
+    border-radius: 100% 0% 100% 0% / 12% 100% 0% 88% ;
+}

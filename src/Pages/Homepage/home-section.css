@@ -1,0 +1,7 @@
+#home-section{
+    background-image: url('skyline-201807999.jpg');
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+}
