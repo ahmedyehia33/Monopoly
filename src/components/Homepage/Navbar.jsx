@@ -36,22 +36,22 @@ const Navbar = () => {
             <>
             <div className={`transition-transform duration-300 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
-        } h-[6rem] w-full  text-white p-1 flex justify-between bg-black items-center pr-8 border-b-2 border-double border-white`} id='navbar'>
-                <div className="logo w-[12rem] md:w-[20rem] sm:w-[10rem] h-[98%] ">
-                    <img src='monopoly-high-resolution-log.png' className='w-full h-full rounded-lg' />
+        } h-[6rem] w-full  text-white p-0 flex justify-between bg-black items-center pr-8 border-b-2 border-double border-white`} id='navbar'>
+                <div className="logo w-[12rem] md:w-[15rem] sm:w-[15rem] h-[100%] ">
+                    <img src='/FOR DARK BACKGROUND2.png' className='w-full h-full rounded-lg' />
                 </div>
                 <div id='nav-items' className='flex gap-2 items-center justify-end  text-center w-[60%] h-[99%]'>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md'>
-                        <h2 className='w-full text-3xl hover:text-blue-900 hover:cursor-pointer text-white '>Home</h2>                        
+                        <h2 className='w-full text-3xl hover:text-gray-600 hover:cursor-pointer text-white '>Home</h2>                        
                     </div>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md'>
-                        <h2 className='w-full text-3xl hover:text-blue-900 hover:cursor-pointer text-white '>Services</h2>                        
+                        <h2 className='w-full text-3xl hover:text-gray-600 hover:cursor-pointer text-white '>Services</h2>                        
                     </div>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md'>
-                        <h2 className='w-full text-3xl hover:text-blue-900 hover:cursor-pointer text-white '>About</h2>                        
+                        <h2 className='w-full text-3xl hover:text-gray-600 hover:cursor-pointer text-white '>About</h2>                        
                     </div>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md'>
-                        <h2 className='w-full text-3xl hover:text-blue-900 hover:cursor-pointer text-white '>Contact Us</h2>                        
+                        <h2 className='w-full text-3xl hover:text-gray-600 hover:cursor-pointer text-white '>Contact Us</h2>                        
                     </div>
 
                 </div>

@@ -4,11 +4,11 @@ import Navbar from '../../components/Homepage/Navbar';
 
 const About = () => {
     return (    <>
-        <div className='flex flex-col gap-[35rem] w-full items-center content-center'>
+        <div className='flex flex-col gap-[30rem] w-full items-center content-center'>
             <div className='w-full'>
         <Navbar/>
         </div>
-        <div id='about' className='h-[auto] w-[100%] bg-white flex flex-col  rounded-lg gap-10 ' >
+        <div id='about' className='h-[auto] w-[100%] bg-white flex flex-col  pb-[8rem] gap-10 ' >
             <div className='flex flex-col w-full items-center content-center pt-[5rem] gap-2'>
                 <h2 className='text-black text-2xl sm:text-6xl '>
                     Explore Our Proprites
