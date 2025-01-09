@@ -1,8 +1,11 @@
 import React from 'react';
-import HomeSection from './HomeSection';
+import HomeSection from '../../components/Homepage/HomeSection';
 //import Navbar from '../components/Navbar';
-import About from './About';
-import OurMission from './OurMission';
+import About from '../../components/Homepage/About';
+
+import StaticsCard from '../../components/Homepage/StaticsCard';
+import OurTeam from '../../components/Homepage/OurTeam';
+import WorkWithUs from '../../components/Homepage/WorkWithUs';
 
 
 const HomePage = () => {
@@ -11,7 +14,9 @@ const HomePage = () => {
             
             <HomeSection/>
             <About/>
-            <OurMission/>
+            <StaticsCard/>
+            <OurTeam/>
+            <WorkWithUs/>
         </div>
             </> );
 }

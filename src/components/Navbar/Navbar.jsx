@@ -40,7 +40,7 @@ const Navbar = () => {
                 <div className="logo w-[12rem] md:w-[15rem] sm:w-[15rem] h-[100%] ">
                     <img src='/FOR DARK BACKGROUND2.png' className='w-full h-full rounded-lg' />
                 </div>
-                <div id='nav-items' className='flex gap-2 items-center justify-end  text-center w-[60%] h-[99%]'>
+                <div id='nav-items' className='flex gap-4 items-center justify-end  text-center w-[80%] h-[99%]'>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md'>
                         <h2 className='w-full text-3xl hover:text-gray-600 hover:cursor-pointer text-white '>Home</h2>                        
                     </div>

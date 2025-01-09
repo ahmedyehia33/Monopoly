@@ -9,13 +9,13 @@ img{
     object-position: center;
     object-fit: contain;
 }
-@media (min-width: 650px){
+@media (min-width: 820px){
     #nav-button{
         display: none;
     }
 
 }
-@media (max-width: 650px){
+@media (max-width: 820px){
         #nav-items{
             display: none;
         }

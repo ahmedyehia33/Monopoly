@@ -7,7 +7,7 @@ const HomeSection = () => {
     return (  <>
       <div
           id="home-section"
-          className="relative h-[35rem] w-full flex items-center content-center justify-center overflow-hidden"
+          className="relative h-[35rem] sm:h-[40rem] w-full flex items-center content-center justify-center overflow-hidden"
       >
           {/* Background Video */}
           <video
