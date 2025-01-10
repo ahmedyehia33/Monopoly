@@ -4,6 +4,7 @@ import './statics-card.css'
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement } from "chart.js";
 ChartJS.register(ArcElement);
+import { IoCallOutline } from "react-icons/io5";
 
 const StaticsCard = () => {
     const staticsData = {
@@ -82,9 +83,10 @@ const handlePrevious = ()=>{
 
 
     return ( 
-           <>
-                <div className='flex flex-col bg-white w-full pb-8'> 
-                        <div className='w-full text-center flex flex-col gap-5 p-2'>
+           <>   
+                <div id='statics-card-container 'className='flex w-full justify-center bg-white '>
+                <div className='flex flex-col bg-gray-300 w-[94%] pb-8 rounded-3xl py-5'> 
+                        <div className='w-full text-center flex flex-col gap-5 p-2 pt-10'>
                             <h1 className='text-3xl sm:text-6xl tracking-wide sm:tracking-widest font-extrabold'>
                                 Where to Invest ?
                             </h1>
@@ -93,7 +95,7 @@ const handlePrevious = ()=>{
                                 <span className='text-black font-semibold'> United Arab Emirates</span>
                             </p>
                         </div>
-                    <div className='w-full flex justify-evenly bg-white content-center items-center py-5'>
+                    <div className='w-full flex justify-evenly bg-gray-300 content-center items-center py-5 '>
                         <div>
                                 <GrPrevious className='hover:cursor-pointer' size={40} onClick={handlePrevious}/>
                         </div>
@@ -121,11 +123,11 @@ const handlePrevious = ()=>{
                                 <GrNext className='hover:cursor-pointer' size={40} onClick={handleNext}/>
                         </div>
                     </div>
-                    <div className='w-full text-center flex flex-col gap-5 p-2'>
+                    <div className='w-full text-center flex flex-col gap-20 p-2 pt-10 '>
                         <h1 className='text-xl sm:text-4xl -tracking-normal sm:tracking-wide font-bold'>
                             You also can connect with us for a private consulation
                         </h1>
-                        <div className='w-full flex flex-col gap-3 items-center justify-center'>
+                        <div className='w-full flex flex-col gap-3 items-center justify-center rounded-b-3xl'>
                             <div>
                                 <span id="hurry" className="font-extrabold text-4xl sm:text-6xl">HURRY </span><span id="up" className="font-extrabold text-4xl sm:text-6xl">UP </span>
                             </div>
@@ -133,11 +135,12 @@ const handlePrevious = ()=>{
                                 Take your free session with our experts
                             </div>
                             <div className='h-[5rem] w-[12rem] bg-black rounded-full text-white text-xl flex items-center justify-center border-2  border-double border-emerald-400 hover: cursor-pointer'>
-                                CONTACT US
+                               <span><IoCallOutline size={30} /></span>CONTACT US
                             </div>
                             
                         </div>    
                     </div>
+                </div>
                 </div>
            </>
             );

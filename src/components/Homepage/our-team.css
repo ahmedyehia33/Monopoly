@@ -1,3 +1,18 @@
 #team-member-info{
                     text-shadow: 1px 1px 3px black;
                 }
+.swiper-button-next::after,
+.swiper-button-prev::after {
+                            color: #000000; /* Change the arrow color */
+                            font-size: 30px; /* Adjust size if needed */
+                            }
+.swiper-pagination-bullet {
+                            background-color: #000000; /* Default color for dots */
+                            opacity: 1; /* Slightly transparent */
+                            }
+                            
+.swiper-pagination-bullet-active {
+                                background-color: #000000 !important; /* Color for active dot */
+                                opacity: 1; /* Fully opaque */
+                                scale: 1.5; /* Enlarge the active dot slightly */
+                                }

@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './navbar.css'
+import './navbar.css';
+import { IoHome } from "react-icons/io5";
+import { GrServices } from "react-icons/gr";
+import { BsFillInfoSquareFill } from "react-icons/bs";
+import { IoCallOutline } from "react-icons/io5";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -41,17 +45,17 @@ const Navbar = () => {
                     <img src='/logos/FOR DARK BACKGROUND2.png' className='w-full h-full' />
                 </div>
                 <div id='nav-items' className='flex gap-4 items-center justify-end  text-center w-[80%] h-[99%]'>
-                    <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md'>
-                        <h2 className='w-full text-3xl hover:text-gray-600 hover:cursor-pointer text-white '>Home</h2>                        
+                    <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
+                   <span > <IoHome  size={25} /></span> <h2 className='w-full text-3xl '> Home</h2>                        
                     </div>
-                    <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md'>
-                        <h2 className='w-full text-3xl hover:text-gray-600 hover:cursor-pointer text-white '>Services</h2>                        
+                    <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
+                   <span > <GrServices  size={25} /></span> <h2 className='w-full text-3xl '> Services</h2>                        
                     </div>
-                    <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md'>
-                        <h2 className='w-full text-3xl hover:text-gray-600 hover:cursor-pointer text-white '>About</h2>                        
+                    <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
+                   <span > <BsFillInfoSquareFill  size={25} /></span> <h2 className='w-full text-3xl '> About</h2>                        
                     </div>
-                    <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md'>
-                        <h2 className='w-full text-3xl hover:text-gray-600 hover:cursor-pointer text-white '>Contact Us</h2>                        
+                    <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
+                   <span > <IoCallOutline  size={25} /></span> <h2 className='w-full text-3xl '> Contact</h2>                        
                     </div>
 
                 </div>

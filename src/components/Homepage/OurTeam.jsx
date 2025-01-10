@@ -66,7 +66,8 @@ const OurTeam = () => {
                        
     return (    
             <>
-            <div id='our-team-container' className='flex flex-col w-full bg-white p-5 '>
+            <div className='w-full bg-white flex justify-center py-[2.5rem] '>
+            <div id='our-team-container' className='flex flex-col w-[94%] bg-gray-300 p-5 rounded-3xl '>
                 <div id='our-team-header' className='w-full flex justify-center items-center' >
                     <h1 className='text-3xl sm:text-6xl tracking-wide sm:tracking-widest font-extrabold'>
                         Meet our team
@@ -98,8 +99,8 @@ const OurTeam = () => {
                               delay: 2000,
                               disableOnInteraction: false,
                             }}
-                          pagination={{ clickable: true }}
-                          
+                          pagination={{ clickable: false}}
+                          allowTouchMove={false}
                           navigation={true}
                           modules={[ Pagination, Navigation, Autoplay]}
                           className="mySwiper"
@@ -132,6 +133,7 @@ const OurTeam = () => {
                   </Swiper>
                 </div>
 
+            </div>
             </div>
             </>
      );
