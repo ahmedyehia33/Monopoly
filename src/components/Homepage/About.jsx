@@ -18,7 +18,7 @@ const About = () => {
             </div>
             <div className='grid grid-cols-2 lg:flex lg:justify-center   w-full items-center content-center gap-5 p-2 sm:px-28 md:px-28  '>
                 <div className='flex items-center  justify-center '>
-                <div className="property-card text-white h-[15rem] w-[12rem] hover:h-[16rem] hover:w-[13rem] flex flex-col items-start content-start p-5 rounded-lg" id='property-card1'>
+                <div className="property-card text-white h-[15rem] w-[12rem]  flex flex-col items-start content-start p-5 rounded-lg" id='property-card1'>
                     <p className='text-2xl font-semibold'>Villas</p>
                     
                 </div>

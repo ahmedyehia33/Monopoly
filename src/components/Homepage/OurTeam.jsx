@@ -6,7 +6,7 @@ import "swiper/css/autoplay";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation,EffectCoverflow } from "swiper/modules";
 
 const OurTeam = () => {
     const teamMockup = {
@@ -67,48 +67,52 @@ const OurTeam = () => {
     return (    
             <>
             <div className='w-full bg-white flex justify-center py-[2.5rem] '>
-            <div id='our-team-container' className='flex flex-col w-[94%] bg-gray-300 p-5 rounded-3xl '>
-                <div id='our-team-header' className='w-full flex justify-center items-center' >
+            <div id='our-team-container' className='flex flex-col w-[94%] bg-gray-300 px-5 py-20 rounded-3xl '>
+                <div id='our-team-header' className='w-full flex flex-col justify-center items-center gap-5' >
                     <h1 className='text-3xl sm:text-6xl tracking-wide sm:tracking-widest font-extrabold'>
                         Meet our team
                     </h1>
+                    <p className='text-xl md:text-2xl text-gray-500 text-center'>
+                        The experts behind every dream home
+                    </p>
                 </div>
-                <div id='our-team-swiper'>
+                
+                <div id='our-team-swiper' className='border-b-2 border-black border-opacity-50'>
                                   <Swiper
-                          
-                          grabCursor={false}
-                          centeredSlides={true}
-                          
-                          breakpoints={{
-                              // When the window width is >= 640px
-                              640: {
-                                slidesPerView: 1,
-                              },
-                              // When the window width is >= 768px
-                              768: {
-                                slidesPerView: 2,
-                              },
-                              // When the window width is >= 1024px
-                              1024: {
-                                slidesPerView: 3,
-                              },
-                            }}
-                          loop={true}
-                          
-                          autoplay={{
-                              delay: 2000,
-                              disableOnInteraction: false,
-                            }}
-                          pagination={{ clickable: false}}
-                          allowTouchMove={false}
-                          navigation={true}
-                          modules={[ Pagination, Navigation, Autoplay]}
-                          className="mySwiper"
-                        >
+                                   grabCursor={false}
+                                   centeredSlides={true}
+                                   effect='coverflow'
+                                   coverflowEffect={{
+                                    rotate: 50,
+                                    stretch: 0,
+                                    depth: 100,
+                                    modifier: 1,
+                                    slideShadows: false,
+                                  }}
+                                  breakpoints={{640: {
+                                                  slidesPerView: 1,
+                                                },  
+                                                768: {
+                                                  slidesPerView: 2,
+                                                },
+                                                 1024: {
+                                                  slidesPerView: 4,
+                                                },
+                                              }}
+                                  loop={true}
+                                  autoplay={{delay:3000,
+                                         disableOnInteraction: false,
+                                  }}
+                                  pagination={{ clickable: false}}
+                                  allowTouchMove={false}
+                                  navigation={true}
+                                  modules={[ Pagination, Navigation, Autoplay, EffectCoverflow]}
+                                  className="mySwiper"
+                                 >
                           {teamMockup.team.map((member) => (
                               
-                            <SwiperSlide  key={member.name} style={{ boxShadow: 'none' }}>
-                              <div className='h-[30rem] w-[full] p-5 bg-black my-20 mx-10 flex flex-col items-start justify-end rounded-3xl border-2 border-white text-white' style={{backgroundImage: `url(${member.image})`, backgroundPosition:'center', backgroundSize:'cover'}}>
+                            <SwiperSlide  key={member.name} >
+                              <div className='h-[30rem] w-[full]  md:h-[25rem] lg:h-[25rem] p-5 bg-black my-20 mx-10 flex flex-col items-start justify-end rounded-3xl border-2 border-white text-white' style={{backgroundImage: `url(${member.image})`, backgroundPosition:'center', backgroundSize:'cover'}}>
                                   <div  className='grid grid-cols-2 w-full'>
                                     <div id='team-member-info' className='flex flex-col gap-4 w-full'>
                                       <div className='text-4xl w-full font-semibold'>
@@ -131,6 +135,22 @@ const OurTeam = () => {
                       
                     ))}
                   </Swiper>
+                </div>
+                <div id='our-team-info' className='flex w-full text-center '>
+                  <p className='text-xl my-4 border-r-2 border-black p-2 border-opacity-40 w-[50%] '>
+                  At <span className='text-2xl font-extrabold text-sky-950 '>Monopoly </span> our team is the heart of everything we do. We’re passionate, dedicated, and driven to help you achieve your real estate goals
+                  </p>
+                  <p className='text-xl my-4 p-2 w-[50%]'>
+                  With a blend of experience, innovation, and care, our team works tirelessly to turn your real estate dreams into reality.
+                  </p>
+                </div>
+                <div id='our-team-info' className='flex w-full text-center'>
+                  <p className='text-xl my-4 border-r-2 border-black p-2 border-opacity-40 w-[50%]'>
+                  What makes us stand out? Our team’s commitment to integrity, collaboration, and results.
+                  </p>
+                  <p className='text-xl my-4 p-2 w-[50%]'>
+                  Our team ensures every property stands out in the competitive market.
+                  </p>
                 </div>
 
             </div>

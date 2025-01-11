@@ -6,6 +6,8 @@ import { Chart as ChartJS, ArcElement } from "chart.js";
 ChartJS.register(ArcElement);
 import { IoCallOutline } from "react-icons/io5";
 
+
+
 const StaticsCard = () => {
     const staticsData = {
                         total_market_size: "US$0.69 trillion (2025 projection)",
@@ -80,6 +82,12 @@ const handlePrevious = ()=>{
                                       return prevIndex;
                             })
                             }
+useEffect(() => {
+                    const intervalId = setInterval(() => {
+                        handleNext();
+                    }, 7000); 
+                    return () => clearInterval(intervalId);
+                }, []);
 
 
     return ( 
@@ -134,10 +142,9 @@ const handlePrevious = ()=>{
                             <div className='text-xl sm:text-2xl font-semibold text-gray-500'>
                                 Take your free session with our experts
                             </div>
-                            <div className='h-[5rem] w-[12rem] bg-black rounded-full text-white text-xl flex items-center justify-center border-2  border-double border-emerald-400 hover: cursor-pointer'>
-                               <span><IoCallOutline size={30} /></span>CONTACT US
+                            <div className='h-[5rem] w-[15rem] bg-black rounded-full text-white text-xl flex items-center justify-center border-2  border-double border-emerald-400 hover: cursor-pointer'>
+                               <span className='mr-2'><IoCallOutline size={40} /></span>CONTACT US
                             </div>
-                            
                         </div>    
                     </div>
                 </div>
