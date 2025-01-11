@@ -40,22 +40,22 @@ const Navbar = () => {
             <>
             <div className={`transition-transform duration-300 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
-        } h-[6rem] w-full  text-white p-0 flex justify-between bg-black items-center pr-8 border-b-2 border-double border-white`} id='navbar'>
+        } h-[6rem] w-full  text-white p-0 flex justify-between bg-black opacity-80 items-center pr-8 border-b-2 border-double border-white`} id='navbar'>
                 <div className="logo w-[12rem] md:w-[18rem] sm:w-[15rem]   ">
                     <img src='/logos/FOR DARK BACKGROUND2.png' className='w-full h-full' />
                 </div>
                 <div id='nav-items' className='flex gap-4 items-center justify-end  text-center w-[80%] h-[99%]'>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
-                   <span > <IoHome  size={25} /></span> <h2 className='w-full text-3xl '> Home</h2>                        
+                   <span className='mr-2'> <IoHome  size={25} /></span> <h2 className='w-full text-2xl '> Home</h2>                        
                     </div>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
-                   <span > <GrServices  size={25} /></span> <h2 className='w-full text-3xl '> Services</h2>                        
+                   <span className='mr-2'><GrServices  size={25} /></span> <h2 className='w-full text-2xl '> Services</h2>                        
                     </div>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
-                   <span > <BsFillInfoSquareFill  size={25} /></span> <h2 className='w-full text-3xl '> About</h2>                        
+                   <span className='mr-2'><BsFillInfoSquareFill  size={25} /></span> <h2 className='w-full text-2xl '> About</h2>                        
                     </div>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
-                   <span > <IoCallOutline  size={25} /></span> <h2 className='w-full text-3xl '> Contact</h2>                        
+                   <span className='mr-2'><IoCallOutline  size={25} /></span> <h2 className='w-full text-2xl '> Contact</h2>                        
                     </div>
 
                 </div>

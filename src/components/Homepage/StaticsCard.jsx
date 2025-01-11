@@ -108,11 +108,11 @@ useEffect(() => {
                                 <GrPrevious className='hover:cursor-pointer' size={40} onClick={handlePrevious}/>
                         </div>
                         <div id='statics-card' style={{backgroundImage:`url(${selectedState.background})`}} className='h-[auto] pt-8 p-5 pb-12  w-[75%] rounded-3xl text-white flex flex-col sm:flex-col md:flex-row items-center content-center gap-10'>
-                            <div className="static-card-header w-full p-5   sm:p-2 sm:h-[12rem]  flex justify-center items-center text-5xl font-extrabold bg-black bg-opacity-50 rounded-lg text-center">
+                            <div className="static-card-header w-full p-5   sm:p-2 sm:h-[12rem]  flex justify-center items-center text-5xl md:text-8xl font-extrabold bg-black bg-opacity-50 rounded-lg text-center">
                                 {selectedState.name}
                             </div>
                     
-                    
+                            <div className='flex flex-col justify-center items-center gap-5'>
                             <div className='static-card-info p-4 flex flex-col w-full h-[auto] items-center content-center justify-center text-center bg-black bg-opacity-50 rounded-lg'>
                                 <div className='text-3xl'> Market Share <br/><span id='statics-card-span' className='text-black text-2xl font-extrabold'>{selectedState.market_share}</span></div>
                                 <div className='text-3xl'>2024 sales transactions <br/><span id='statics-card-span' className='text-black text-2xl font-extrabold'>{selectedState.details['2024_sales_transactions']}</span> </div>
@@ -126,6 +126,7 @@ useEffect(() => {
                                 </div>
                                 <div className='text-2xl text-white mt-2 text-center w-full '>{selectedState.details.growth_from_previous_year}%</div>
                             </div> 
+                            </div>
                         </div>
                         <div>
                                 <GrNext className='hover:cursor-pointer' size={40} onClick={handleNext}/>
