@@ -6,6 +6,7 @@ import About from '../../components/Homepage/About';
 import StaticsCard from '../../components/Homepage/StaticsCard';
 import OurTeam from '../../components/Homepage/OurTeam';
 import WorkWithUs from '../../components/Homepage/WorkWithUs';
+import Footer from '../../components/footer/Footer';
 
 
 const HomePage = () => {
@@ -17,6 +18,7 @@ const HomePage = () => {
             <StaticsCard/>
             <OurTeam/>
             <WorkWithUs/>
+            
         </div>
             </> );
 }

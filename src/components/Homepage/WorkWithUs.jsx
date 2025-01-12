@@ -12,7 +12,7 @@ const WorkWithUs = () => {
                         </div>
                         <div id='work-with-us-content' className='flex flex-col gap-8'>
                             <div className='flex flex-col md:flex-row md:h-[auto] items-baseline'>
-                                <div className='flex flex-col gap-5 text-center w-[90%] md:w-[35%] md:h-[full] lg:h-[18rem] p-5 md:border-r-2 md:border-black md:border-opacity-40'>
+                                <div className='flex flex-col gap-5 text-center w-[100%] md:w-[35%] md:h-[full] lg:h-[18rem] p-5 md:border-r-2 md:border-black md:border-opacity-40'>
                                     <h2 className='text-2xl font-semibold'>
                                         Expertise in the UAE Real Estate Market 
                                     </h2>
@@ -20,7 +20,7 @@ const WorkWithUs = () => {
                                         With deep knowledge of the local market, we offer tailored advice and solutions for buyers, sellers, and investors, ensuring your real estate journey is seamless and profitable.
                                     </p>
                                 </div>
-                                <div className='flex flex-col text-center gap-5 w-[90%] md:w-[35%] md:h-[100%] p-2 md:border-r-2 md:border-black md:border-opacity-40'>
+                                <div className='flex flex-col text-center gap-5 w-[100%] md:w-[35%] md:h-[100%] p-2 md:border-r-2 md:border-black md:border-opacity-40'>
                                     <h2 className='text-2xl font-semibold'>
                                         Customer-Centric Approach
                                     </h2>
@@ -28,7 +28,7 @@ const WorkWithUs = () => {
                                        Your goals are our priority. We focus on understanding your needs and providing personalized services to help you find the perfect property or investment.
                                     </p>
                                 </div>
-                                <div className='flex flex-col text-center gap-5 w-[90%] md:w-[35%] md:h-[18rem] p-2 '>
+                                <div className='flex flex-col text-center gap-5 w-[100%] md:w-[35%] md:h-[18rem] p-2 '>
                                     <h2 className='text-2xl font-semibold'>
                                         Transparency and Trust
                                     </h2>
@@ -38,7 +38,7 @@ const WorkWithUs = () => {
                                 </div>
                                 </div>
                                 <div className='flex flex-col md:flex-row md:h-[auto] items-baseline'>
-                                <div className='flex flex-col gap-5 text-center w-[90%] md:w-[35%] md:h-[full] lg:h-[18rem] p-5 md:border-r-2 md:border-black md:border-opacity-40'>
+                                <div className='flex flex-col gap-5 text-center w-[100%] md:w-[35%] md:h-[full] lg:h-[18rem] p-5 md:border-r-2 md:border-black md:border-opacity-40'>
                                     <h2 className='text-2xl font-semibold'>
                                         Innovative Solutions
                                     </h2>
@@ -46,7 +46,7 @@ const WorkWithUs = () => {
                                         Leveraging cutting-edge technology and data analytics, we provide insights that give you a competitive advantage, whether you’re buying, selling, or investing.
                                     </p>
                                 </div>
-                                <div className='flex flex-col gap-5 text-center w-[90%] md:w-[35%] md:h-[full] lg:h-[18rem] p-5 md:border-r-2 md:border-black md:border-opacity-40'>
+                                <div className='flex flex-col gap-5 text-center w-[100%] md:w-[35%] md:h-[full] lg:h-[18rem] p-5 md:border-r-2 md:border-black md:border-opacity-40'>
                                     <h2 className='text-2xl font-semibold'>
                                         Wide Network of Opportunities
                                     </h2>
@@ -54,7 +54,7 @@ const WorkWithUs = () => {
                                          We connect you to an extensive portfolio of properties, from luxury apartments in Dubai to emerging investment opportunities across the Emirates.
                                     </p>
                                 </div>
-                                <div className='flex flex-col gap-5 text-center w-[90%] md:w-[35%] md:h-[full] lg:h-[18rem] p-5 '>
+                                <div className='flex flex-col gap-5 text-center w-[100%] md:w-[35%] md:h-[full] lg:h-[18rem] p-5 '>
                                     <h2 className='text-2xl font-semibold'>
                                         Growth Potential
                                     </h2>
@@ -65,7 +65,7 @@ const WorkWithUs = () => {
                                     
                                 </div>
                                 <div className='flex flex-col md:flex-row md:h-[auto] items-baseline'>
-                                <div className='flex flex-col gap-5 text-center w-[90%] md:w-[50%] md:h-[full] lg:h-[18rem] p-5 md:border-r-2 md:border-black md:border-opacity-40'>
+                                <div className='flex flex-col gap-5 text-center w-[100%] md:w-[50%] md:h-[full] lg:h-[18rem] p-5 md:border-r-2 md:border-black md:border-opacity-40'>
                                     <h2 className='text-2xl font-semibold'>
                                         Sustainability Focus
                                     </h2>
@@ -73,7 +73,7 @@ const WorkWithUs = () => {
                                        We are committed to promoting sustainable real estate practices, helping you invest in properties that align with environmental and societal goals.
                                     </p>
                                 </div>
-                                <div className='flex flex-col gap-5 text-center w-[90%] md:w-[45%] md:h-[full] lg:h-[18rem] p-5 '>
+                                <div className='flex flex-col gap-5 text-center w-[100%] md:w-[45%] md:h-[full] lg:h-[18rem] p-5 '>
                                     <h2 className='text-2xl font-semibold'>
                                         Your Success is Our Success
                                     </h2>

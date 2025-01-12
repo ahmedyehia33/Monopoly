@@ -4,6 +4,7 @@ import { IoHome } from "react-icons/io5";
 import { GrServices } from "react-icons/gr";
 import { BsFillInfoSquareFill } from "react-icons/bs";
 import { IoCallOutline } from "react-icons/io5";
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -40,20 +41,24 @@ const Navbar = () => {
             <>
             <div className={`transition-transform duration-300 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
-        } h-[6rem] w-full  text-white p-0 flex justify-between bg-black opacity-80 items-center pr-8 border-b-2 border-double border-white`} id='navbar'>
+        } h-[6rem] w-full  text-white p-0 flex justify-between bg-black opacity-90 z-20 items-center pr-8 border-b-2 border-double border-white`} id='navbar'>
                 <div className="logo w-[12rem] md:w-[18rem] sm:w-[15rem]   ">
                     <img src='/logos/FOR DARK BACKGROUND2.png' className='w-full h-full' />
                 </div>
                 <div id='nav-items' className='flex gap-4 items-center justify-end  text-center w-[80%] h-[99%]'>
+                <NavLink to='/' className={({ isActive }) => (isActive ? "text-gray-600" : "")}>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
                    <span className='mr-2'> <IoHome  size={25} /></span> <h2 className='w-full text-2xl '> Home</h2>                        
                     </div>
+                    </NavLink>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
                    <span className='mr-2'><GrServices  size={25} /></span> <h2 className='w-full text-2xl '> Services</h2>                        
                     </div>
+                    <NavLink to='about' className={({ isActive }) => (isActive ? "text-gray-600" : "")}>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
                    <span className='mr-2'><BsFillInfoSquareFill  size={25} /></span> <h2 className='w-full text-2xl '> About</h2>                        
                     </div>
+                    </NavLink>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
                    <span className='mr-2'><IoCallOutline  size={25} /></span> <h2 className='w-full text-2xl '> Contact</h2>                        
                     </div>
@@ -71,7 +76,22 @@ const Navbar = () => {
 
                 </div>
             </div>
-            {open ? (<div id='nav-menu' className='h-[80%] w-[70%] bg-black opacity-80 fixed right-0 mt-[6rem]'></div>) : null}
+            {open ? (<div id='nav-menu' className='h-[80%] w-[70%] z-20 bg-black text-white opacity-90 fixed right-0 mt-[6rem] pt-[4rem] flex flex-col gap-5'>
+                        <NavLink to='/' className={({ isActive }) => (isActive ? "text-gray-600" : "")}
+                            onClick={()=> {setOpen(false)
+                              setIsVisible(true)}}
+                        >
+                          <div className='h-[10%] w-[full] border-b-2 border-white pb-[2rem] flex items-center justify-center hover:bg-none  rounded-md  hover:cursor-pointer'>
+                            <div className='flex '> <span className='mr-2'> <IoHome  size={35} /></span> <h2 className='w-full text-4xl '> Home</h2></div>                     
+                          </div>
+                        </NavLink>
+                        <NavLink to='about' className={({ isActive }) => (isActive ? "text-gray-600" : "")}>
+                          <div className='h-[20%] w-[full]  flex items-center justify-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
+                            <div className='flex'> <span className='mr-2'> <IoHome  size={35} /></span> <h2 className='w-full text-4xl '> Home</h2></div>                     
+                          </div>
+                        </NavLink>
+
+                     </div>) : null}
             </>
      );
 }

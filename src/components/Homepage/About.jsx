@@ -4,11 +4,9 @@ import Navbar from '../Navbar/Navbar';
 
 const About = () => {
     return (    <>
-        <div className='flex flex-col gap-[30rem] sm:gap-[40rem] w-full items-center content-center'>
-            <div className='w-full'>
-        <Navbar/>
-        </div>
-        <div id='about-container' className='w-full px-5 py-10 bg-white flex justify-center'>
+        <div className='flex flex-col pt-[35rem] sm:pt-[40rem] w-full items-center content-center'>
+           
+        <div id='about-container' className='w-full  px-5 py-10 bg-white flex justify-center'>
         <div id='about' className='h-[auto] w-[94%] bg-gray-300 flex flex-col  pb-[8rem] gap-10 ' >
             <div className='flex flex-col w-full items-center content-center pt-[5rem] gap-5 text-center'>
                 <h2 className='text-3xl sm:text-6xl tracking-wide sm:tracking-wide pt-4 font-extrabold'>

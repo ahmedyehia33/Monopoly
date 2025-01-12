@@ -12,7 +12,7 @@
       .property-card:hover {
         transform: scale(1.1); /* Enlarge the card */
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); /* Add shadow */
-        filter: brightness(1.2); /* Brighten the card slightly */
+        filter: brightness(1.1); /* Brighten the card slightly */
       }
       
       /* Add a subtle zoom effect for the background image on hover */
