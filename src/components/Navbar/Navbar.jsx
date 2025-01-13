@@ -108,7 +108,7 @@ const Navbar = () => {
                             onClick={()=> {setOpen(false)
                               setIsVisible(true)}}
                         >
-                          <div className=' w-[full] border-b border-white pb-[2rem] flex items-center justify-center hover:bg-none  rounded-md  hover:cursor-pointer'>
+                          <div className=' w-[full]  pb-[2rem] flex items-center justify-center hover:bg-none  rounded-md  hover:cursor-pointer'>
                             <div className='flex '> <span className='mr-2'> <IoCallOutline  size={25} /></span> <h2 className='w-full text-2xl '> Contact</h2></div>                     
                           </div>
                         </NavLink>
