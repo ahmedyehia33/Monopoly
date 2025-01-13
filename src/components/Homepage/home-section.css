@@ -14,15 +14,7 @@
 #background-video {
     pointer-events: none !important;
 }
-@media (min-width: 620px){
-    #background-image{
-        display: none;
-    }
-
-}
-@media (max-width: 620px){
-    #background-video{
-        display: none;
-    }
-    
+#background-image{
+    object-position: center;
+    object-fit: cover;
 }

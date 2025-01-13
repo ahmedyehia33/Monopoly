@@ -1,7 +1,7 @@
 import React from 'react';
 import HomeSection from '../../components/Homepage/HomeSection';
 //import Navbar from '../components/Navbar';
-import About from '../../components/Homepage/About';
+import OurProprties from '../../components/Homepage/OurProprties';
 
 import StaticsCard from '../../components/Homepage/StaticsCard';
 import OurTeam from '../../components/Homepage/OurTeam';
@@ -14,7 +14,7 @@ const HomePage = () => {
         <div className='flex flex-col items-center content-center'>
             
             <HomeSection/>
-            <About/>
+            <OurProprties/>
             <StaticsCard/>
             <OurTeam/>
             <WorkWithUs/>

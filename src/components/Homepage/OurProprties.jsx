@@ -1,8 +1,8 @@
 import React from 'react';
-import './about.css';
+import './our-proprties.css';
 import Navbar from '../Navbar/Navbar';
 
-const About = () => {
+const OurProprties = () => {
     return (    <>
         <div className='flex flex-col pt-[35rem] sm:pt-[40rem] w-full items-center content-center'>
            
@@ -54,4 +54,4 @@ const About = () => {
                 </>  );
 }
  
-export default About;
+export default OurProprties;
