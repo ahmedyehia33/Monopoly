@@ -1,8 +1,7 @@
 import React from 'react';
 import { IoLogoFacebook } from "react-icons/io";
 import { FaInstagramSquare } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaSquareWhatsapp } from "react-icons/fa6";
+import { FaSquareWhatsapp, FaSquareXTwitter } from "react-icons/fa6";
 import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
@@ -28,7 +27,7 @@ const Footer = () => {
                                 <span className='text-white'><FaInstagramSquare size={40}/></span><span className='text-lg md:text-xl font-extralight'>/Monopoly</span>
                             </div>
                             <div className="facebook flex items-center gap-0 hover:cursor-pointer">
-                                <span className='text-white'><FaXTwitter size={40}/></span><span className='text-lg md:text-xl font-extralight'>/Monopoly</span>
+                                <span className='text-white'><FaSquareXTwitter size={40}/></span><span className='text-lg md:text-xl font-extralight'>/Monopoly</span>
                             </div>
                             <div className="facebook flex items-center gap-0 hover:cursor-pointer">
                                 <span className='text-white'><FaSquareWhatsapp size={40}/></span><span className='text-lg md:text-xl font-extralight'>/01155082312</span>

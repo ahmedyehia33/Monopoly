@@ -9,10 +9,10 @@ const OurProprties = () => {
         <div id='about-container' className='w-full  px-5 py-10 bg-white flex justify-center'>
         <div id='about' className='h-[auto] w-[94%] bg-gray-300 flex flex-col  pb-[8rem] gap-10 ' >
             <div className='flex flex-col w-full items-center content-center pt-[5rem] gap-5 text-center'>
-                <h2 className='text-3xl sm:text-6xl tracking-wide sm:tracking-wide pt-4 font-extrabold'>
-                    Explore Our Proprites
+                <h2 className='text-3xl sm:text-6xl tracking-wide sm:tracking-wide pt-4 font-extrabold pl-4'>
+                    Explore Our Listings
                 </h2>
-                <p className='text-sm font-extralight text-gray-500 sm:text-2xl '>explore our special unique proprites</p>
+                <p className='text-sm font-extralight text-gray-500 sm:text-2xl '>explore our special unique Listings</p>
             </div>
             <div className='grid grid-cols-2 lg:flex lg:justify-center   w-full items-center content-center gap-5 p-2 sm:px-28 md:px-28  '>
                 <div className='flex items-center  justify-center '>
@@ -21,12 +21,12 @@ const OurProprties = () => {
                     
                 </div>
                 </div>
-                <div className='flex items-center  justify-center '>
-                <div className="property-card text-white h-[15rem] w-[12rem] flex flex-col items-start content-start p-2 rounded-lg " id='property-card2'>
+                <a href='https://www.bayut.com/companies/monopoly-prime-properties-105666/?category=apartments&activeTab=active_listings' target='_blank'>  <div className='flex items-center  justify-center '>
+               <div className="property-card text-white h-[15rem] w-[12rem] flex flex-col items-start content-start p-2 rounded-lg " id='property-card2'>
                     <p className='text-2xl font-semibold'>Luxury apartments</p>
                     
                 </div>
-                </div>
+                </div></a>
                 <div className='flex items-center  justify-center '>
                 <div className="property-card text-white h-[15rem] w-[12rem] flex flex-col items-start content-start p-5 rounded-lg " id='property-card3'>
                     <p className='text-2xl font-semibold'>Offices</p>
@@ -36,7 +36,7 @@ const OurProprties = () => {
                 <div className='flex items-center  justify-center '>
                 <div className="property-card text-white h-[15rem] w-[12rem] flex flex-col items-start content-start p-5 rounded-lg " id='property-card1'>
                     <p className='text-2xl font-semibold'>Town house</p>
-                    <p>2 propties</p>
+                    
                 </div>
                 </div>
                 

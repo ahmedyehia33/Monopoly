@@ -63,7 +63,7 @@ const HomeSection = () => {
                           onInit={(typewriter) => {
                               typewriter
                                   .typeString(
-                                      'Welcome to <span class="monopoly">MONOPOLY</span> '
+                                      'Welcome to <span class="monopoly">MONOPOLY prime</span> '
                                   )
                                   .pauseFor(1500)
                                   .deleteAll()

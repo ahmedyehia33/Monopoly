@@ -42,7 +42,7 @@ const Navbar = () => {
             <div className={`transition-transform duration-300 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
         } h-[6rem] w-full  text-white p-0 flex justify-between bg-black opacity-90 z-20 items-center pr-8 border-b-2 border-double border-white`} id='navbar'>
-                <div className="logo w-[12rem] md:w-[18rem] sm:w-[15rem]   ">
+                <div className="logo w-[10rem] ml-4 md:w-[10rem]  md:ml-5   ">
                     <img src='/logos/FOR DARK BACKGROUND2.png' className='w-full h-full' />
                 </div>
                 <div id='nav-items' className='flex gap-4 mr-4 items-center justify-end  text-center w-[80%] h-[99%]'>

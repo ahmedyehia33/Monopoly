@@ -99,8 +99,8 @@ useEffect(() => {
                                 Where to Invest ?
                             </h1>
                             <p className='text-gray-500 sm:text-2xl '>
-                                let's take a  look at the real estate market in the
-                                <span className='text-black font-semibold'> United Arab Emirates</span>
+                                let's take a  look at the real estate market in 
+                                <span className='text-black font-semibold'> Dubai</span>
                             </p>
                         </div>
                     <div className='w-full flex justify-evenly bg-gray-300 content-center items-center py-5 '>

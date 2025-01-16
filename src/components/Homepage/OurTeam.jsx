@@ -138,7 +138,7 @@ const OurTeam = () => {
                 </div>
                 <div id='our-team-info' className='flex w-full text-center '>
                   <p className='text-xl my-4 border-r-2 border-black p-2 border-opacity-40 w-[50%] '>
-                  At <span className='text-2xl font-extrabold text-sky-950 '>Monopoly </span> our team is the heart of everything we do. We’re passionate, dedicated, and driven to help you achieve your real estate goals
+                  At <span className='text-2xl font-extrabold text-black '>Monopoly prime</span> our team is the heart of everything we do. We’re passionate, dedicated, and driven to help you achieve your real estate goals
                   </p>
                   <p className='text-xl my-4 p-2 w-[50%]'>
                   With a blend of experience, innovation, and care, our team works tirelessly to turn your real estate dreams into reality.
