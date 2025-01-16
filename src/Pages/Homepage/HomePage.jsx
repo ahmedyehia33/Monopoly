@@ -12,7 +12,7 @@ import WorkTwo from '../../components/Homepage/WorkWithUSTwo';
 
 const HomePage = () => {
     return ( <>
-        <div className='flex flex-col items-center content-center'>
+        <div className='flex flex-col items-center content-center '>
             
             <HomeSection/>
             <OurProprties/>
