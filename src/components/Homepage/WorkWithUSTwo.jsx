@@ -55,7 +55,7 @@ const WorkTwo = () => {
                     id:8,
                     header:"Your success is our success",
                     content:"We measure our success by how well we help you achieve your real estate goals. Your satisfaction drives everything we do.",
-                    img:"/workcard/workcard8.jpg"
+                    img:"/workcards/workcard8.jpg"
                 }]
     const textTrimmer=(text)=>{
                 return text.length > 50 ? `${text.slice(0,80)}....`: text

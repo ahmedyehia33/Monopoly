@@ -2,6 +2,7 @@ import React from 'react';
 import { IoLogoFacebook } from "react-icons/io";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaSquareWhatsapp, FaSquareXTwitter } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
@@ -19,18 +20,21 @@ const Footer = () => {
                           <div className='w-full text-2xl font-extrabold text-center mb-3'>
                             Follow us on
                           </div>  
-                        <div id='footer-contact-info' className='grid grid-cols-2 gap-4 md:flex md:items-center md:gap-6'>
+                        <div id='footer-contact-info' className='grid grid-cols-5 gap-4 md:flex md:items-center md:gap-6'>
                             <div className="facebook flex w-full items-center gap-0 hover:cursor-pointer">
-                                <span className='text-white'><IoLogoFacebook size={40}/></span><span className='text-lg md:text-xl font-extralight'>/Monopoly</span>
+                                <span className='text-white'><IoLogoFacebook size={50}/></span>
                             </div>
                             <div className="facebook flex items-center gap-0 hover:cursor-pointer">
-                                <span className='text-white'><FaInstagramSquare size={40}/></span><span className='text-lg md:text-xl font-extralight'>/Monopoly</span>
+                                <span className='text-white'><FaInstagramSquare size={50}/></span>
                             </div>
                             <div className="facebook flex items-center gap-0 hover:cursor-pointer">
-                                <span className='text-white'><FaSquareXTwitter size={40}/></span><span className='text-lg md:text-xl font-extralight'>/Monopoly</span>
+                                <span className='text-white'><FaSquareXTwitter size={50}/></span>
                             </div>
                             <div className="facebook flex items-center gap-0 hover:cursor-pointer">
-                                <span className='text-white'><FaSquareWhatsapp size={40}/></span><span className='text-lg md:text-xl font-extralight'>/01155082312</span>
+                                <span className='text-white'><FaSquareWhatsapp size={50}/></span>
+                            </div>
+                            <div className="facebook flex items-center gap-0 hover:cursor-pointer">
+                                <span className='text-white'><MdEmail size={50}/></span>
                             </div>
                         </div>
                         </div>
