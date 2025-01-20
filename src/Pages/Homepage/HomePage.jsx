@@ -5,7 +5,7 @@ import OurProprties from '../../components/Homepage/OurProprties';
 
 import StaticsCard from '../../components/Homepage/StaticsCard';
 import OurTeam from '../../components/Homepage/OurTeam';
-import WorkWithUs from '../../components/Homepage/WorkWithUs';
+
 import Footer from '../../components/footer/Footer';
 import WorkTwo from '../../components/Homepage/WorkWithUSTwo';
 
@@ -18,7 +18,7 @@ const HomePage = () => {
             <OurProprties/>
             <StaticsCard/>
             <OurTeam/>
-            <WorkWithUs/>
+            
             <WorkTwo/>
             
         </div>

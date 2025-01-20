@@ -4,19 +4,21 @@ import { IoHome } from "react-icons/io5";
 import { GrServices } from "react-icons/gr";
 import { BsFillInfoSquareFill } from "react-icons/bs";
 import { IoCallOutline } from "react-icons/io5";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(true); // Navbar visibility
     const [lastScrollY, setLastScrollY] = useState(0); // Track last scroll position
+    const [bg , setBg] = useState('black'); 
+    const location = useLocation()
     useEffect(() => {
         const handleScroll = () => {
           const currentScrollY = window.scrollY;
           if(open){
             setIsVisible(true);
           }
-          else if (currentScrollY > lastScrollY && currentScrollY > 500) {
+          else if (currentScrollY > lastScrollY && currentScrollY > 700) {
             // Scroll Down: Hide Navbar
             setIsVisible(false);
           } 
@@ -25,7 +27,11 @@ const Navbar = () => {
             // Scroll Up: Show Navbar
             setIsVisible(true);
           }
-    
+          if (location.pathname === "/" && currentScrollY <= 500) {
+            setBg('none'); // Opacity increases from 0 to 1 as you scroll past 500px
+          } else {
+            setBg('black'); // Maximum opacity after 500px
+          }
           setLastScrollY(currentScrollY); // Update last scroll position
         };
     
@@ -34,14 +40,24 @@ const Navbar = () => {
         return () => {
           window.removeEventListener('scroll', handleScroll); // Cleanup
         };
-      }, [lastScrollY]);
+      }, [lastScrollY, open , location.pathname]);
+      useEffect(()=>{
+          if(location.pathname === '/'){
+            setBg('none')
+          }
+          else{
+            setBg('black')
+          }
+      },[location.pathname])
     
   
     return ( 
             <>
             <div className={`transition-transform duration-300 ${
-          isVisible ? 'translate-y-0' : '-translate-y-full'
-        } h-[6rem] w-full  text-white p-0 flex justify-between bg-black opacity-90 z-20 items-center pr-8 border-b-2 border-double border-white`} id='navbar'>
+               isVisible ? 'translate-y-0' : '-translate-y-full'
+               } h-[6rem] w-full  text-white p-0 flex justify-between   z-20 items-center pr-8 border-b-2 border-double border-white`}
+               style={{ background: bg }}
+               id='navbar'>
                 <div className="logo w-[10rem] ml-4 md:w-[10rem]  md:ml-5   ">
                     <img src='/logos/FOR DARK BACKGROUND2.png' className='w-full h-full' />
                 </div>
@@ -79,13 +95,15 @@ const Navbar = () => {
 
                 </div>
             </div>
-            {open ? (<div id='nav-menu' className='rounded-b-3xl w-[70%] z-20 bg-black text-white opacity-100 fixed right-0 mt-[6rem] pt-[1rem] flex flex-col gap-4'>
+            {open ? (<div id='nav-menu' className='rounded-b-3xl w-[100%] z-20 bg-black text-white opacity-100 fixed right-0 mt-[6rem] pt-[1rem] flex flex-col gap-4'>
                         <NavLink to='/' className={({ isActive }) => (isActive ? "text-gray-600" : "")}
                             onClick={()=> {setOpen(false)
                               setIsVisible(true)}}
                         >
                           <div className=' w-[full] border-b border-white pb-[2rem] flex items-center justify-center hover:bg-none  rounded-md  hover:cursor-pointer'>
-                            <div className='flex '> <span className='mr-2'> <IoHome  size={25} /></span> <h2 className='w-full text-2xl '> Home</h2></div>                     
+                            <div className='flex ' 
+                            data-aos="fade-left"
+                            data-aos-delay="100"> <span className='mr-2'> <IoHome  size={25} /></span> <h2 className='w-full text-2xl '> Home</h2></div>                     
                           </div>
                         </NavLink>
                         <NavLink to='services' className={({ isActive }) => (isActive ? "text-gray-600" : "")}
@@ -93,7 +111,9 @@ const Navbar = () => {
                               setIsVisible(true)}}
                         >
                           <div className=' w-[full] border-b border-white pb-[2rem] flex items-center justify-center hover:bg-none  rounded-md  hover:cursor-pointer'>
-                            <div className='flex '> <span className='mr-2'> <GrServices  size={25} /></span> <h2 className='w-full text-2xl '> Services</h2></div>                     
+                            <div className='flex'
+                            data-aos="fade-left"
+                            data-aos-delay="200"> <span className='mr-2'> <GrServices  size={25} /></span> <h2 className='w-full text-2xl '> Services</h2></div>                     
                           </div>
                         </NavLink>
                         <NavLink to='about' className={({ isActive }) => (isActive ? "text-gray-600" : "")}
@@ -101,7 +121,9 @@ const Navbar = () => {
                               setIsVisible(true)}}
                         >
                           <div className=' w-[full] border-b border-white pb-[2rem] flex items-center justify-center hover:bg-none  rounded-md  hover:cursor-pointer'>
-                            <div className='flex '> <span className='mr-2'> <BsFillInfoSquareFill  size={25} /></span> <h2 className='w-full text-2xl '> About</h2></div>                     
+                            <div className='flex'
+                            data-aos="fade-left"
+                            data-aos-delay="300"> <span className='mr-2'> <BsFillInfoSquareFill  size={25} /></span> <h2 className='w-full text-2xl '> About</h2></div>                     
                           </div>
                         </NavLink>
                         <NavLink to='contact' className={({ isActive }) => (isActive ? "text-gray-600 " : "")}
@@ -109,7 +131,9 @@ const Navbar = () => {
                               setIsVisible(true)}}
                         >
                           <div className=' w-[full]  pb-[2rem] flex items-center justify-center hover:bg-none  rounded-md  hover:cursor-pointer'>
-                            <div className='flex '> <span className='mr-2'> <IoCallOutline  size={25} /></span> <h2 className='w-full text-2xl '> Contact</h2></div>                     
+                            <div className='flex'
+                            data-aos="fade-left"
+                            data-aos-delay="400"> <span className='mr-2'> <IoCallOutline  size={25} /></span> <h2 className='w-full text-2xl '> Contact</h2></div>                     
                           </div>
                         </NavLink>
 

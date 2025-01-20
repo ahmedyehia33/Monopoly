@@ -1,0 +1,9 @@
+.social-icon img,
+.social-icon .twitter-icon {
+  transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.social-icon:hover img,
+.social-icon:hover .twitter-icon {
+  transform: scale(1.1); /* Enlarge the icon */
+}

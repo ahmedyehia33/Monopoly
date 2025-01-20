@@ -2,7 +2,7 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease ;
         cursor: pointer;
         border-radius: 1rem; /* Ensure cards have rounded corners */
         overflow: hidden; /* Keep effects within the card bounds */
@@ -10,7 +10,7 @@
       
      
       .property-card:hover {
-        transform: scale(1.1); /* Enlarge the card */
+        transform: scale(1.1) !important; /* Enlarge the card */
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5); /* Add shadow */
         filter: brightness(1.1); /* Brighten the card slightly */
       }

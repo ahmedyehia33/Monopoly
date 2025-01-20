@@ -7,6 +7,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation,EffectCoverflow } from "swiper/modules";
+import offset from './../../../node_modules/dom-helpers/esm/offset';
 
 const OurTeam = () => {
     const teamMockup = {
@@ -67,8 +68,11 @@ const OurTeam = () => {
     return (    
             <>
             <div className='w-full bg-white flex justify-center py-[2.5rem] '>
-            <div id='our-team-container' className='flex flex-col w-[94%] bg-gray-300 px-5 py-20 rounded-3xl '>
-                <div id='our-team-header' className='w-full flex flex-col justify-center items-center gap-5' >
+            <div id='our-team-container' className='flex flex-col w-[94%] overflow-x-hidden bg-gray-300 px-5 py-20 rounded-3xl '>
+                <div id='our-team-header'
+                 data-aos='fade-right'
+                 className='w-full flex flex-col justify-center items-center gap-5' 
+                 >
                     <h1 className='text-3xl sm:text-6xl tracking-wide sm:tracking-widest font-extrabold'>
                         Meet our team
                     </h1>
@@ -77,7 +81,11 @@ const OurTeam = () => {
                     </p>
                 </div>
                 
-                <div id='our-team-swiper' className='border-b-2 border-black border-opacity-50'>
+                <div id='our-team-swiper'
+                 data-aos='fade-left'
+                 data-aos-offset='300'
+                 className='border-b-2 border-black border-opacity-50'
+                 >
                                   <Swiper
                                    grabCursor={false}
                                    centeredSlides={true}

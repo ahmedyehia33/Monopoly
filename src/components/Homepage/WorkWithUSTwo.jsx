@@ -1,4 +1,6 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useRef } from 'react';
+import { CSSTransition } from "react-transition-group";
+import "./work-two.css";
 
 const WorkTwo = () => {
     const [expandedID , setExpandedID] = useState([]);
@@ -71,22 +73,40 @@ const WorkTwo = () => {
                             Why Work with Us?
                             </h1>
                         </div>
-                <div id='work-cards-container' className='w-full flex flex-col gap-2 md:grid md:grid-cols-2 md:gap-5 items-center content-center'>
+                <div id='work-cards-container' className='w-full flex flex-col overflow-x-hidden gap-2 md:grid md:grid-cols-2 md:gap-5 items-center content-center'>
                     {cardsData.map((card)=>
                        (
                             <div key={card.id} className='card w-full h-[auto]   flex flex-col justify-center items-center md:flex-row gap-1 ' >   
-                                <div className='image w-[90%] h-[20rem] bg-black flex items-center rounded-xl '>
+                                <div 
+                                className='image w-[90%] h-[20rem]  bg-black flex items-center rounded-xl'
+                                data-aos='fade-right'>
                                     <img src={card.img} loading='eager' alt={card.header} className='w-full h-full rounded-xl object-cover object-center'/>
                                 </div>
-                                <div className="flex flex-col h-[auto] justify-center  p-5 gap-4 md:min-h-[20rem] text-center w-full">
+                                <div 
+                                className="flex flex-col h-[auto] justify-center  p-5 gap-4 md:min-h-[20rem] text-center w-full"
+                                data-aos='fade-left'>
                                     <div className='text-2xl font-extrabold'>
                                         {card.header}
                                     </div>
-                                    <div className="text-xl flex flex-col w-full justify-center items-center">
-                                       <div> {expandedID.includes(card.id) ? card.content : textTrimmer(card.content)}</div><span className='text-white h-[3rem] w-[10rem] rounded-2xl p-2 mt-2 bg-black cursor-pointer' onClick={() => toggleContent(card.id)}>
-                                            {expandedID.includes(card.id)? "See less" : "See more"}
+                                    <div className="flex flex-col items-center">
+                                        <CSSTransition
+                                            in={expandedID.includes(card.id)}
+                                            timeout={200}
+                                            classNames="expand"
+                                            unmountOnExit
+                                        >
+                                            <div className="text-xl">{card.content}</div>
+                                        </CSSTransition>
+                                        {!expandedID.includes(card.id) && (
+                                            <div className="text-xl">{textTrimmer(card.content)}</div>
+                                        )}
+                                        <span
+                                            className="text-white h-[3rem] w-[10rem] rounded-2xl p-2 mt-2 bg-black cursor-pointer flex justify-center items-center"
+                                            onClick={() => toggleContent(card.id)}
+                                        >
+                                            {expandedID.includes(card.id) ? "See less" : "See more"}
                                         </span>
-                                    </div>
+                                        </div>
                                 </div>
                             </div>
                         )

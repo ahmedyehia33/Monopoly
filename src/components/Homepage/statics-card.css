@@ -9,6 +9,7 @@
 #statics-card-span{
                     text-shadow: 1px 1px 3px white;
 }
+
 @keyframes slideInFromLeft {
     0% {
       transform: translateX(-100%);
