@@ -15,17 +15,14 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
           const currentScrollY = window.scrollY;
-          if(open){
-            setIsVisible(true);
-          }
-          else if (currentScrollY > lastScrollY && currentScrollY > 700) {
-            // Scroll Down: Hide Navbar
-            setIsVisible(false);
-          } 
-          
-          else {
-            // Scroll Up: Show Navbar
-            setIsVisible(true);
+          if (open) {
+            setIsVisible(true); // If the menu is open, navbar should always be visible
+          } else if (location.pathname === "/" && currentScrollY <= 700) {
+            setIsVisible(true); // On the homepage, show navbar within first 700px
+          } else if (currentScrollY > lastScrollY && currentScrollY >= 200) {
+            setIsVisible(false); // Scrolling down: Hide navbar
+          } else {
+            setIsVisible(true); // Scrolling up: Show navbar
           }
           if (location.pathname === "/" && currentScrollY <= 500) {
             setBg('none'); // Opacity increases from 0 to 1 as you scroll past 500px

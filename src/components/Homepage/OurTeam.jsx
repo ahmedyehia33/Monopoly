@@ -73,7 +73,7 @@ const OurTeam = () => {
                  data-aos='fade-right'
                  className='w-full flex flex-col justify-center items-center gap-5' 
                  >
-                    <h1 className='text-3xl sm:text-6xl tracking-wide sm:tracking-widest font-extrabold'>
+                    <h1 className='text-3xl sm:text-5xl md:text-8xl tracking-wide sm:tracking-wide pt-4 font-medium md:font-thin pl-4'>
                         Meet our team
                     </h1>
                     <p className='text-xl md:text-2xl text-gray-500 text-center'>
@@ -104,7 +104,7 @@ const OurTeam = () => {
                                                   slidesPerView: 2,
                                                 },
                                                  1024: {
-                                                  slidesPerView: 4,
+                                                  slidesPerView: 3,
                                                 },
                                               }}
                                   loop={true}

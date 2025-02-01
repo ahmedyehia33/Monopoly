@@ -48,6 +48,8 @@
       }
 #about-container{
                     border-radius: 100% 0% 100% 0% / 12% 100% 0% 88% ;
+                    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
                 }
 @media (max-width: 820px){
                             #about{

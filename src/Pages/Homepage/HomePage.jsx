@@ -4,10 +4,11 @@ import HomeSection from '../../components/Homepage/HomeSection';
 import OurProprties from '../../components/Homepage/OurProprties';
 
 import StaticsCard from '../../components/Homepage/StaticsCard';
-import OurTeam from '../../components/Homepage/OurTeam';
+//import OurTeam from '../../components/Homepage/OurTeam';
 
-import Footer from '../../components/footer/Footer';
+
 import WorkTwo from '../../components/Homepage/WorkWithUSTwo';
+import OurTeamTwo from '../../components/Homepage/OurTeamTwo';
 
 
 const HomePage = () => {
@@ -17,7 +18,7 @@ const HomePage = () => {
             <HomeSection/>
             <OurProprties/>
             <StaticsCard/>
-            <OurTeam/>
+            <OurTeamTwo/>
             
             <WorkTwo/>
             

@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useRef } from 'react';
-import { CSSTransition } from "react-transition-group";
+import { motion } from "framer-motion";
 import "./work-two.css";
 
 const WorkTwo = () => {
@@ -68,7 +68,9 @@ const WorkTwo = () => {
     return ( <>
             <div className='w-full bg-white flex justify-center'>
                 <div className='flex flex-col w-[94%] h-[auto] bg bg-gray-300 rounded-3xl py-8 pt-16 gap-10 px-5'>
-                <div className='w-full text-center flex-col justify-center'>
+                <div 
+                data-aos="fade-right"
+                className='w-full text-center flex-col justify-center mb-5'>
                             <h1 className='text-3xl sm:text-6xl tracking-wide sm:tracking-widest font-extrabold'>
                             Why Work with Us?
                             </h1>
@@ -89,17 +91,15 @@ const WorkTwo = () => {
                                         {card.header}
                                     </div>
                                     <div className="flex flex-col items-center">
-                                        <CSSTransition
-                                            in={expandedID.includes(card.id)}
-                                            timeout={200}
-                                            classNames="expand"
-                                            unmountOnExit
-                                        >
-                                            <div className="text-xl">{card.content}</div>
-                                        </CSSTransition>
-                                        {!expandedID.includes(card.id) && (
-                                            <div className="text-xl">{textTrimmer(card.content)}</div>
-                                        )}
+                                    <motion.div
+                            initial={false}
+                            animate={{ height: expandedID.includes(card.id) ? "auto" : "4rem", opacity: 1 }}
+                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                            className="overflow-hidden text-xl"
+                        >
+                            {expandedID.includes(card.id) ? card.content : textTrimmer(card.content)}
+                        </motion.div>
+                                       
                                         <span
                                             className="text-white h-[3rem] w-[10rem] rounded-2xl p-2 mt-2 bg-black cursor-pointer flex justify-center items-center"
                                             onClick={() => toggleContent(card.id)}
