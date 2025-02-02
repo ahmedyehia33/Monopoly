@@ -19,7 +19,7 @@ const Navbar = () => {
             setIsVisible(true); // If the menu is open, navbar should always be visible
           } else if (location.pathname === "/" && currentScrollY <= 700) {
             setIsVisible(true); // On the homepage, show navbar within first 700px
-          } else if (currentScrollY > lastScrollY && currentScrollY >= 200) {
+          } else if (currentScrollY > lastScrollY && currentScrollY >= 50) {
             setIsVisible(false); // Scrolling down: Hide navbar
           } else {
             setIsVisible(true); // Scrolling up: Show navbar
