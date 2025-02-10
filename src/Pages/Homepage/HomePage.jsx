@@ -9,6 +9,7 @@ import StaticsCard from '../../components/Homepage/StaticsCard';
 
 import WorkTwo from '../../components/Homepage/WorkWithUSTwo';
 import OurTeamTwo from '../../components/Homepage/OurTeamTwo';
+import Statics from '../../components/Homepage/Statics';
 
 
 const HomePage = () => {
@@ -17,7 +18,7 @@ const HomePage = () => {
             
             <HomeSection/>
             <OurProprties/>
-            <StaticsCard/>
+            <Statics/>
             <OurTeamTwo/>
             
             <WorkTwo/>

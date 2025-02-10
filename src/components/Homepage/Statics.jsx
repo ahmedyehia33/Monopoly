@@ -1,6 +1,6 @@
 import React from 'react';
 import './statics.css';
-import {IoCallOutline} from "react-icons/io5";
+import { FaPhoneVolume } from "react-icons/fa6";
 import { GrTransaction } from "react-icons/gr";
 import { FaAngleDoubleUp } from "react-icons/fa";
 import { motion } from 'framer-motion';
@@ -22,10 +22,13 @@ const Statics = () => {
         source: "Data compiled from various Dubai real estate reports",
     };
 
-    return ( <>
-    <div id='statics-card-container 'className='flex w-full justify-center bg-white '>
-                <div className='flex flex-col bg-gray-300 w-[94%] pb-8 rounded-3xl py-5 px-5'> 
-                        <div className='w-full text-center flex flex-col gap-5 p-2 pt-10'>
+    return (
+            <>
+            <div id='statics-card-container 'className='flex w-full justify-center bg-white '>
+                <div className='flex flex-col bg-gray-300 w-[94%] overflow-hidden gap-2 pb-4 rounded-3xl px-5'> 
+                        <div 
+                        data-aos="fade-right"
+                        className='w-full text-center flex flex-col gap-5 p-2 pt-10'>
                             <h1 className='text-3xl sm:text-5xl md:text-8xl tracking-wide sm:tracking-wider pt-4 font-medium md:font-thin pl-4'>
                                 Where to Invest ?
                             </h1>
@@ -34,7 +37,9 @@ const Statics = () => {
                                 <span className='text-black font-semibold'> Dubai</span>
                             </p>
                         </div>
-                        <div id="dubai-card" className='w-full p-6 rounded-3xl flex flex-col justify-center items-center gap-2'>
+                        <div 
+                        data-aos="fade-left"
+                        id="dubai-card" className='w-full p-6 rounded-3xl flex flex-col justify-center items-center gap-2'>
                             <div className='flex w-full justify-center text-3xl md:text-6xl text-white font-extralight text-center mb-8'>
                                 <h2>{dubaiRealEstateStats.title}</h2>
                             </div>
@@ -78,7 +83,7 @@ const Statics = () => {
 
                             </div>
                             <div className='flex flex-col md:flex-row w-full md:justify-evenly justify-center gap-5'>
-                            <div className='flex border-2 border-white rounded-2xl p-5 gap-3 w-full md:w-[auto] lg:w-[40%] items-center'>
+                                <div className='flex border-2 border-white rounded-2xl p-5 gap-3 w-full md:w-[auto] lg:w-[40%] items-center'>
                                     <motion.div 
                                     animate={{ x: [0, 10, 0], y: [0, -10, 0] }}
                                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -106,7 +111,9 @@ const Statics = () => {
 
                         </div>
                
-                    <div className='w-full text-center flex flex-col gap-20 p-2 pt-10 '>
+                    <div 
+                    data-aos="fade-up"
+                    className='w-full text-center flex flex-col gap-20 p-2 pt-10 '>
                         <h1 className='text-xl sm:text-4xl -tracking-normal sm:tracking-wide font-bold'>
                             You also can connect with us for a private consulation
                         </h1>
@@ -118,13 +125,16 @@ const Statics = () => {
                                 Take your free session with our experts
                             </div>
                             <div className='h-[5rem] w-[15rem] bg-black rounded-full text-white text-xl flex items-center justify-center border-2  border-double border-emerald-400 hover: cursor-pointer'>
-                               <span className='mr-2'><IoCallOutline size={40} /></span>CONTACT US
+                               <motion.div 
+                               animate={{ x: [-2, 2, -2] }}
+                               transition={{ duration: 0.2, repeat: Infinity, ease: "linear" }}
+                               className='mr-2'><FaPhoneVolume size={40} /></motion.div> <div>CONTACT US</div>
                             </div>
                         </div>    
                     </div>
                 </div>
-                </div>
-           </>
+            </div>
+            </>
     
     
              );

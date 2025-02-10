@@ -5,6 +5,7 @@ import Footer from './components/footer/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import offset from './../node_modules/dom-helpers/esm/offset';
+import ScrollToTop from './components/ScrollToTop';
 
 const Layout = () => {
     useEffect(() => {
@@ -17,6 +18,7 @@ const Layout = () => {
       }, []);
     return ( <>
             <div className='flex flex-col gap-0 '>
+                <ScrollToTop/>
                 <Navbar/>
                 <Outlet/>
                 <Footer/>

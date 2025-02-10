@@ -67,11 +67,11 @@ const WorkTwo = () => {
     };
     return ( <>
             <div className='w-full bg-white flex justify-center'>
-                <div className='flex flex-col w-[94%] h-[auto] bg bg-gray-300 rounded-3xl py-8 pt-16 gap-10 px-5'>
+                <div className='flex flex-col w-[94%] h-[auto] bg bg-gray-300 rounded-3xl py-2  gap-2 px-5'>
                 <div 
                 data-aos="fade-right"
                 className='w-full text-center flex-col justify-center mb-5'>
-                            <h1 className='text-3xl sm:text-6xl tracking-wide sm:tracking-widest font-extrabold'>
+                            <h1 className='text-3xl sm:text-5xl md:text-8xl tracking-wide sm:tracking-wider pt-4 font-medium md:font-thin pl-4'>
                             Why Work with Us?
                             </h1>
                         </div>
@@ -87,7 +87,7 @@ const WorkTwo = () => {
                                 <div 
                                 className="flex flex-col h-[auto] justify-center  p-5 gap-4 md:min-h-[20rem] text-center w-full"
                                 data-aos='fade-left'>
-                                    <div className='text-2xl font-extrabold'>
+                                    <div className='text-2xl font-semibold tracking-wide'>
                                         {card.header}
                                     </div>
                                     <div className="flex flex-col items-center">
@@ -95,7 +95,7 @@ const WorkTwo = () => {
                             initial={false}
                             animate={{ height: expandedID.includes(card.id) ? "auto" : "4rem", opacity: 1 }}
                             transition={{ duration: 0.4, ease: "easeInOut" }}
-                            className="overflow-hidden text-xl"
+                            className="overflow-hidden text-xl  text-gray-800"
                         >
                             {expandedID.includes(card.id) ? card.content : textTrimmer(card.content)}
                         </motion.div>

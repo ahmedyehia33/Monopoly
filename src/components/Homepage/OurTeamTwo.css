@@ -1,51 +1,52 @@
 #team-member-info{
-    text-shadow: 1px 1px 3px black;
-}
+                    text-shadow: 1px 1px 3px black;
+                  }
+
 swiper-slide {
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-  }
+                transform: scale(1);
+                transition: transform 0.3s ease-in-out;
+              }
   
-  /* Scale up the active slide */
-  .swiper-slide-active {
-    
-    z-index: 10;
-  }
+  
+.swiper-slide-active {
+                        z-index: 10;
+                      }
   
   /* Adjust neighboring slides for smooth transition */
-  .swiper-slide-prev,
-  .swiper-slide-next {
-    
-    z-index: 5;
-  }
+.swiper-slide-prev,
+.swiper-slide-next {
+                      z-index: 5;
+                    }
   
   /* Dimming effect for non-active slides */
-  .swiper-slide:not(.swiper-slide-active) {
-    opacity: 0.7;
-    z-index: 1;
-  }
-  .swiper-slide-active:hover {
-    .slide{
-        transform: scale(1.1);
-        cursor: pointer;
-        filter: brightness(1.1);
-    }
-  }
+.swiper-slide:not(.swiper-slide-active) {
+                                            opacity: 0.7;
+                                            z-index: 1;
+                                          }
+.swiper-slide-active:hover {
+                              .slide{
+                                  transform: scale(1.1);
+                                  cursor: pointer;
+                                  filter: brightness(1.1);
+                              }
+                            }
             
 #selected-member-card{  
-  background-color: #e0e0e0;
-  border-radius: 50px;
-  box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
-  border: 2px solid rgb(206, 206, 206);
-}
+                        background-color: #e0e0e0;
+                        border-radius: 50px;
+                        box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+                        border: 2px solid rgb(206, 206, 206);
+                      }
+
 #our-team-info p {
-  background-color: #e0e0e0;
-  border-radius: 50px;
-  box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
-  border: 2px solid rgb(206, 206, 206);
-  transition: transform 0.3s ease-in-out;
-}   
+                    background-color: #000000;
+                    border-radius: 50px;
+                    box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+                    border: 2px solid rgb(206, 206, 206);
+                    transition: transform 0.3s ease-in-out;
+                  } 
+
 #our-team-info p:hover{
-  transform: scale(1.1);
-}            
+                        transform: scale(1.1);
+                       }            
                   

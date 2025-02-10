@@ -93,7 +93,7 @@ useEffect(() => {
     return ( 
            <>   
                 <div id='statics-card-container 'className='flex w-full justify-center bg-white '>
-                <div className='flex flex-col bg-gray-300 w-[94%] pb-8 rounded-3xl py-5'> 
+                <div className='flex flex-col bg-gray-300 w-[94%] pb-8 rounded-3xl py-5 overflow-hidden'> 
                         <div className='w-full text-center flex flex-col gap-5 p-2 pt-10'>
                             <h1 className='text-3xl sm:text-6xl tracking-wide sm:tracking-widest font-extrabold'>
                                 Where to Invest ?

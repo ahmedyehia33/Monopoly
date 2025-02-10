@@ -1,20 +1,21 @@
 #home-section{
-    background-image: none;
-    background-position: center;
-    background-size: cover;
-    position: fixed;
-    z-index: -1;
-}
+                background-image: none;
+                background-position: center;
+                background-size: cover;
+                position: fixed;
+                z-index: -1;
+             }
+             
 .monopoly{
-            
             color:rgb(0, 0, 0);
             font-weight: 800;
+         }   
 
-}
 #background-video {
-    pointer-events: none !important;
-}
+                    pointer-events: none !important;
+                  }
+
 #background-image{
-    object-position: center;
-    object-fit: cover;
-}
+                    object-position: center;
+                    object-fit: cover;
+                }
