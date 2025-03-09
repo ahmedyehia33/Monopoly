@@ -4,18 +4,26 @@ import { IoLogoFacebook } from "react-icons/io";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaSquareWhatsapp, FaSquareXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
+    const location = useLocation();
+    const handleClick = () => {
+        if (location.pathname === "/") {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    };
     return ( 
                 <>
                 <div className='w-full bg-white pt-[3rem] flex justify-center text-white ' >
                    <div id='footer-container' className='w-[98%] overflow-x-hidden bg-black rounded-t-3xl flex flex-col'>
                         <div className='flex flex-col md:flex-row w-full justify-between items-center pt-6 px-5'>
                             <div id='footer-logo'>
-                                <div className='w-[15rem] h-[6rem] '> 
-                                    <img src='/FOR DARK BACKGROUND2.png' alt='monopoly-logo' className='w-full object-cover object-center'/>
-                                </div>
+                               <Link to="/" onClick={handleClick}> 
+                                    <div className='w-[15rem] h-[6rem] '> 
+                                        <img src='/FOR DARK BACKGROUND2.png' alt='monopoly-logo' className='w-full object-cover object-center'/>
+                                    </div>
+                                </Link>
                             </div>
                             <div className='flex-col '>
                                <div className='w-full text-2xl font-extrabold text-center mb-3'>
@@ -40,9 +48,11 @@ const Footer = () => {
                                         </span>
                                     </div>
                                     <div className="social-icon whatsapp flex items-center gap-0 hover:cursor-pointer">
+                                    <a href="https://wa.me/1155082312?text=Hello May i Ask about my free session" target="_blank" rel="noopener noreferrer">
                                         <span className='icon-container text-white h-[3rem] w-[3rem]'>
                                             <img src='/socialMediaIcons/whatsapp.png' />
                                         </span>
+                                     </a>   
                                     </div>
                                     <div className="social-icon email flex items-center gap-0 hover:cursor-pointer">
                                         <span className='icon-container text-white h-[3rem] w-[3rem]'>
