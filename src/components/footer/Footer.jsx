@@ -48,11 +48,13 @@ const Footer = () => {
                                         </span>
                                     </div>
                                     <div className="social-icon whatsapp flex items-center gap-0 hover:cursor-pointer">
-                                    <a href="https://wa.me/1155082312?text=Hello May i Ask about my free session" target="_blank" rel="noopener noreferrer">
+                                   
                                         <span className='icon-container text-white h-[3rem] w-[3rem]'>
-                                            <img src='/socialMediaIcons/whatsapp.png' />
+                                            <a href="https://wa.me/1155082312?text=Hello May i Ask about my free session" target="_blank" rel="noopener noreferrer">
+                                                <img src='/socialMediaIcons/whatsapp.png' />
+                                            </a>
                                         </span>
-                                     </a>   
+                                        
                                     </div>
                                     <div className="social-icon email flex items-center gap-0 hover:cursor-pointer">
                                         <span className='icon-container text-white h-[3rem] w-[3rem]'>
