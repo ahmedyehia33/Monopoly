@@ -4,7 +4,7 @@ import { IoHome } from "react-icons/io5";
 import { GrServices } from "react-icons/gr";
 import { BsFillInfoSquareFill } from "react-icons/bs";
 import { IoCallOutline } from "react-icons/io5";
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -55,9 +55,11 @@ const Navbar = () => {
                } h-[6rem] w-full  text-white p-0 flex justify-between   z-20 items-center pr-8 border-b-2 border-double border-white`}
                style={{ background: bg }}
                id='navbar'>
-                <div className="logo w-[10rem] ml-4 md:w-[10rem]  md:ml-5   ">
-                    <img src='/logos/FOR DARK BACKGROUND2.png' className='w-full h-full' />
-                </div>
+               <Link to="/">
+                    <div className="logo w-[10rem] ml-4 md:w-[10rem]  md:ml-5   ">
+                        <img src='/logos/FOR DARK BACKGROUND2.png' className='w-full h-full' />
+                    </div>
+                </Link>
                 <div id='nav-items' className='flex gap-4 mr-4 items-center justify-end  text-center w-[80%] h-[99%]'>
                 <NavLink to='/' className={({ isActive }) => (isActive ? "text-gray-600" : "")}>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>

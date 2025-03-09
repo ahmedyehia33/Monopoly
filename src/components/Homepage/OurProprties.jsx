@@ -23,16 +23,17 @@ const OurProprties = () => {
                     className='grid grid-cols-2 lg:flex lg:justify-center   w-full items-center content-center gap-5 p-2 sm:px-28 md:px-28 py-10 '
                     data-aos="fade-left"
                     >
-                        <div className='flex items-center  justify-center '>
-                        <div 
-                        className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[15rem]  flex flex-col items-start content-start p-5 rounded-lg"
-                        id='property-card1'>
-                            <p className='text-2xl font-semibold'>
-                                Villas
-                            </p>
-                            
-                        </div>
-                        </div>
+                         <a href='https://www.bayut.com/companies/monopoly-prime-properties-105666/?category=apartments&activeTab=active_listings' target='_blank'>
+                            <div className='flex items-center  justify-center '>
+                                <div 
+                                className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[15rem]  flex flex-col items-start content-start p-5 rounded-lg"
+                                id='property-card1'>
+                                    <p className='text-2xl font-semibold'>
+                                        Villas
+                                    </p>    
+                                </div>
+                            </div>
+                        </a>
                         <a href='https://www.bayut.com/companies/monopoly-prime-properties-105666/?category=apartments&activeTab=active_listings' target='_blank'> 
                             <div className='flex items-center  justify-center '>
                                     <div
@@ -45,28 +46,30 @@ const OurProprties = () => {
                                     </div>
                             </div>
                         </a>
-                        <div className='flex items-center  justify-center '>
-                        <div 
-                        className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[15rem] flex flex-col items-start content-start p-5 rounded-lg " 
-                        id='property-card3'>
-                            <p className='text-2xl font-semibold'>
-                                Offices
-                            </p>
-                            
-                        </div>
-                        </div>
-                        <div className='flex items-center  justify-center '>
-                        <div 
-                        className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[15rem] flex flex-col items-start content-start p-5 rounded-lg "
-                        id='property-card1'>
-                            <p className='text-2xl font-semibold'>
-                                Town house
-                            </p>
-                            
-                        </div>
-                        </div>
-                        
-                    
+                        <a href='https://www.bayut.com/companies/monopoly-prime-properties-105666/?category=apartments&activeTab=active_listings' target='_blank'>
+                            <div className='flex items-center  justify-center '>
+                                <div 
+                                className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[15rem] flex flex-col items-start content-start p-5 rounded-lg " 
+                                id='property-card3'>
+                                    <p className='text-2xl font-semibold'>
+                                        Offices
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </a>
+                        <a href='https://www.bayut.com/companies/monopoly-prime-properties-105666/?category=apartments&activeTab=active_listings' target='_blank'>
+                            <div className='flex items-center  justify-center '>
+                                <div 
+                                className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[15rem] flex flex-col items-start content-start p-5 rounded-lg "
+                                id='property-card1'>
+                                    <p className='text-2xl font-semibold'>
+                                        Town house
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </a>
                     </div>
                     <div className='flex flex-col w-full  justify-center text-center'>
                         <h2 

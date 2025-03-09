@@ -22,11 +22,13 @@ const Footer = () => {
                                     Follow us on
                                </div>  
                                <div id='footer-contact-info' className='grid grid-cols-5 gap-4 md:flex md:items-center md:gap-6'>
-                                    <div className="social-icon facebook  flex w-full items-center gap-0 hover:cursor-pointer">
-                                        <span className='icon-container text-white h-[3rem] w-[3rem]'>
-                                            <img src='/socialMediaIcons/facebook.png' />
-                                        </span>
-                                    </div>
+                                  <a href='https://www.facebook.com' target='_blank'>
+                                        <div className="social-icon facebook  flex w-full items-center gap-0 hover:cursor-pointer">
+                                            <span className='icon-container text-white h-[3rem] w-[3rem]'>
+                                                <img src='/socialMediaIcons/facebook.png' />
+                                            </span>
+                                        </div>
+                                    </a>
                                     <div className="social-icon instagram flex items-center gap-0 hover:cursor-pointer">
                                         <span className='icon-container text-white h-[3rem] w-[3rem]'>
                                             <img src='/socialMediaIcons/instagram.png' />

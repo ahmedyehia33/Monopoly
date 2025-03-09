@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { BiBuildingHouse } from "react-icons/bi";
 import { PiBuildingApartmentBold } from "react-icons/pi";
 import { GrMoney } from "react-icons/gr";
+import { Link } from 'react-router-dom';
 
 const Statics = () => {
     const dubaiRealEstateStats = {
@@ -124,12 +125,14 @@ const Statics = () => {
                             <div className='text-xl sm:text-2xl font-semibold text-gray-500'>
                                 Take your free session with our experts
                             </div>
+                            <Link to="/contact">
                             <div className='h-[5rem] w-[15rem] bg-black rounded-full text-white text-xl flex items-center justify-center border-2  border-double border-emerald-400 hover: cursor-pointer'>
                                <motion.div 
                                animate={{ x: [-2, 2, -2] }}
                                transition={{ duration: 0.2, repeat: Infinity, ease: "linear" }}
                                className='mr-2'><FaPhoneVolume size={40} /></motion.div> <div>CONTACT US</div>
                             </div>
+                            </Link>
                         </div>    
                     </div>
                 </div>

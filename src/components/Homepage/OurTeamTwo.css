@@ -41,7 +41,7 @@ swiper-slide {
 #our-team-info p {
                     background-color: #000000;
                     border-radius: 50px;
-                    box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+                    
                     border: 2px solid rgb(206, 206, 206);
                     transition: transform 0.3s ease-in-out;
                   } 
