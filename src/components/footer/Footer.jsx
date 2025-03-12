@@ -58,7 +58,9 @@ const Footer = () => {
                                     </div>
                                     <div className="social-icon email flex items-center gap-0 hover:cursor-pointer">
                                         <span className='icon-container text-white h-[3rem] w-[3rem]'>
+                                        <a href="mailto:ahmed1.yahya73@gmail.com.com?subject=Inquiry&body=Hello, I’d like to ask about...">
                                             <img src='/socialMediaIcons/gmail.png' />
+                                        </a>    
                                         </span>
                                     </div>
                                 </div>
