@@ -72,7 +72,7 @@ const WorkTwo = () => {
                 data-aos="fade-right"
                 className='w-full text-center flex-col justify-center mb-5'>
                             <h1 className='text-3xl sm:text-5xl md:text-8xl tracking-wide sm:tracking-wider pt-4 font-medium md:font-thin pl-4'>
-                            Why Work with Us?
+                            Why Work <span className='text-white font-extrabold'>with</span> Us?
                             </h1>
                         </div>
                 <div id='work-cards-container' className='w-full flex flex-col overflow-x-hidden gap-2 md:grid md:grid-cols-2 md:gap-5 items-center content-center'>

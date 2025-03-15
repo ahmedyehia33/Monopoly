@@ -13,7 +13,7 @@ const OurProprties = () => {
                     data-aos="fade-right"
                     >
                         <h2  className='text-3xl sm:text-5xl md:text-8xl tracking-wide sm:tracking-wide pt-4 font-medium md:font-thin pl-4'>
-                            Explore Our Listings
+                            Explore <span className='font-extrabold text-white' >Our</span> Listings
                         </h2>
                         <p className='text-sm font-extralight text-gray-500 sm:text-2xl'>
                             explore our special unique Listings

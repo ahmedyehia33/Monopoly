@@ -96,7 +96,7 @@ const OurTeamTwo = () => {
                   className='w-full flex flex-col justify-center items-center gap-2' 
                   >
                         <h1 className='text-3xl sm:text-5xl md:text-8xl tracking-wide sm:tracking-wider pt-4 font-medium md:font-thin pl-4'>
-                            Meet our team
+                            Meet <span className='text-white font-extrabold'>our</span> team
                         </h1>
                         <p className='text-xl md:text-2xl text-gray-500 text-center'>
                             The experts behind every dream home

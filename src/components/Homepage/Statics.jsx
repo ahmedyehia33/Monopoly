@@ -31,7 +31,7 @@ const Statics = () => {
                         data-aos="fade-right"
                         className='w-full text-center flex flex-col gap-5 p-2 pt-10'>
                             <h1 className='text-3xl sm:text-5xl md:text-8xl tracking-wide sm:tracking-wider pt-4 font-medium md:font-thin pl-4'>
-                                Where to Invest ?
+                                Where <span className='text-white font-extrabold'>to</span> Invest ?
                             </h1>
                             <p className='text-gray-500 sm:text-2xl '>
                                 let's take a  look at the real estate market in 
