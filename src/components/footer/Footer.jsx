@@ -25,7 +25,7 @@ const Footer = () => {
                                     </div>
                                 </Link>
                             </div>
-                            <div className='flex-col '>
+                            <div className='flex-col md:mr-5'>
                                <div className='w-full text-2xl font-extrabold text-center mb-3'>
                                     Follow us on
                                </div>  

@@ -7,7 +7,7 @@ const OurProprties = () => {
         <>
         <div className='flex flex-col pt-[35rem] sm:pt-[40rem] w-full items-center content-center'>
             <div id='about-container' className='w-full   py-10 bg-white flex justify-center'>
-                <div id='about' className='h-[auto] w-[94%] bg-gray-300 flex flex-col overflow-hidden pb-[2rem] gap-4 px-2' >
+                <div id='about' className='h-[auto] w-[94%] bg-gray-300 flex flex-col overflow-hidden pt-[3rem] pb-[6rem] gap-4 px-2' >
                     <div 
                     className='flex flex-col  w-full items-center content-center pt-[5rem] gap-2 text-center'
                     data-aos="fade-right"

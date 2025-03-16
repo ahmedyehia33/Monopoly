@@ -67,7 +67,7 @@ const WorkTwo = () => {
     };
     return ( <>
             <div className='w-full bg-white flex justify-center'>
-                <div className='flex flex-col w-[94%] h-[auto] bg bg-gray-300 rounded-3xl py-2  gap-2 px-5'>
+                <div className='flex flex-col w-[94%] h-[auto] bg bg-gray-300 rounded-3xl pt-[4rem] pb-[6rem]  gap-2 px-5'>
                 <div 
                 data-aos="fade-right"
                 className='w-full text-center flex-col justify-center mb-5'>

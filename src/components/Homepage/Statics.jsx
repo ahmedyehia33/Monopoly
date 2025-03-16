@@ -26,7 +26,7 @@ const Statics = () => {
     return (
             <>
             <div id='statics-card-container 'className='flex w-full justify-center bg-white '>
-                <div className='flex flex-col bg-gray-300 w-[94%] overflow-hidden gap-2 pb-4 rounded-3xl px-5'> 
+                <div className='flex flex-col bg-gray-300 w-[94%] overflow-hidden gap-2 pt-[3rem] pb-[6rem] rounded-3xl px-5'> 
                         <div 
                         data-aos="fade-right"
                         className='w-full text-center flex flex-col gap-5 p-2 pt-10'>
