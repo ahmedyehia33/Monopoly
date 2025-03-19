@@ -9,7 +9,7 @@ const AboutSec = () => {
         <div className='w-full flex flex-col gap-10  items-center overflow-hidden pt-[5rem]'>
         <div 
                        data-aos="fade-up"
-                       data-aos-duration="2000"
+                       data-aos-duration="1500"
                        style={{background:'url(/SharjahCard.jpg)', backgroundPosition:'center', backgroundSize:'cover',backgroundRepeat:'no-repeat'}}
                        className='rounded-3xl p-5 bg-white w-[94%] flex flex-col  items-center justify-center'>
                             <div className='w-full flex flex-col items-center justify-center md:flex-row'>
@@ -47,7 +47,7 @@ const AboutSec = () => {
                        </div>
                        <div
                           data-aos="fade-left"
-                          data-aos-duration="2000"
+                          data-aos-duration="1500"
                        className='about-card w-full h-auto px-8  md:h-[25rem] py-[2rem] lg:px-[4rem] gap-9 bg-black border-2 border-white rounded-3xl  flex flex-col justify-center text-white'>
                            <div>
                            <h2 className='text-3xl md:text-6xl font-extrabold'>Our Mission</h2>
@@ -74,7 +74,7 @@ const AboutSec = () => {
                         </div>
                        <div
                           data-aos="fade-right"
-                          data-aos-duration="2000"
+                          data-aos-duration="1500"
                        className='about-card w-full h-auto px-8  md:h-[25rem] py-[2rem] lg:px-[4rem] gap-9 bg-black border-2 border-white rounded-3xl lg:mr-[15rem] flex flex-col justify-center text-white'>
                            <div>
                            <h2 className='text-3xl md:text-6xl font-extrabold'>Why Choose Us?</h2>
@@ -101,7 +101,7 @@ const AboutSec = () => {
                        </div> 
                        <div 
                           data-aos="fade-left"
-                          data-aos-duration="2000"
+                          data-aos-duration="1500"
                           className='h-[20rem] w-full md:w-[96%] bg-white rounded-3xl'>
                             <img src="/signature.png" className='w-full h-full' />
                           </div>

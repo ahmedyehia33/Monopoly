@@ -75,7 +75,7 @@ const WorkTwo = () => {
                             Why Work <span className='text-white font-extrabold'>with</span> Us?
                             </h1>
                         </div>
-                <div id='work-cards-container' className='w-full flex flex-col overflow-x-hidden gap-2 md:grid md:grid-cols-2 md:gap-5 items-center content-center'>
+                <div id='work-cards-container' className='w-full flex flex-col overflow-x-hidden gap-2 md:grid md:grid-cols-2 md:gap-5 md:px-[3.5rem] items-center content-center'>
                     {cardsData.map((card)=>
                        (
                             <div key={card.id} className='card w-full h-[auto]   flex flex-col justify-center items-center md:flex-row gap-1 ' >   
