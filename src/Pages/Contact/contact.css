@@ -1,13 +1,13 @@
 
 #contact-container{
-                    background-image: url('/contact.svg');
+                    background-image: url('/RectLight.svg');
                     background-position: center;
                     background-size: cover;
                     background-repeat: no-repeat;
 }
 @media (max-width: 820px){
     #contact-container{
-        background-image: url('/contactmobile.svg');
+        background-image: url('/RectLightMobile.svg');
     }
     
 }
