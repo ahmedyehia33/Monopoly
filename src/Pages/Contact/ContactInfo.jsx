@@ -3,7 +3,7 @@ import { FaPhone, FaWhatsapp, FaEnvelope, FaFacebookF, FaMapMarkerAlt } from 're
 
 const ContactInfoCard = () => {
   return (
-    <div className="w-full p-6 rounded-xl bg-white dark:bg-[#1a1a1a] shadow-xl transition-all duration-500 flex flex-col lg:flex lg:flex-row gap-8">
+    <div className="w-full p-6 rounded-xl bg-[#1a1a1a] dark:bg-[#1a1a1a] shadow-xl transition-all duration-500 flex flex-col lg:flex lg:flex-row gap-8">
 
       {/* Map Section */}
       <div className="w-full lg:w-1/2 h-[250px] lg:h-auto rounded-lg overflow-hidden">
@@ -18,7 +18,7 @@ const ContactInfoCard = () => {
       </div>
 
       {/* Contact Info Section */}
-      <div className="w-full lg:w-1/2 space-y-5 text-black dark:text-white flex flex-col justify-center">
+      <div className="w-full lg:w-1/2 space-y-5 text-white dark:text-white flex flex-col justify-center">
         <div className="flex items-center gap-3">
           <FaPhone className="text-[#FFD700]" />
           <span>+20 100 000 0000</span>

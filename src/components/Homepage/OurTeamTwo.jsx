@@ -89,7 +89,7 @@ const OurTeamTwo = () => {
   return (    
           <>
           <div ref={teamContainerRef} className='w-full bg-white flex justify-center py-[2.5rem] '>
-              <div id='our-team-container' className='flex flex-col w-[94%] overflow-hidden bg-gray-300 px-5 pt-[4rem] pb-[6rem] rounded-3xl '>
+              <div id='our-team-container' className='flex flex-col w-[94%] overflow-hidden bg-gray-300 px-[2rem] pt-[4rem] pb-[6rem]  rounded-3xl '>
               
                   <div id='our-team-header'
                   data-aos='fade-right'
