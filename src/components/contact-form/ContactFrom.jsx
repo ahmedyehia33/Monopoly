@@ -11,6 +11,7 @@ const ContactForm = () => {
                                             });
     const [error, setError] = useState('');
     const [success, setSuccess] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -36,7 +37,7 @@ const ContactForm = () => {
             setError('Please select at least one preferred contact method.');
             return;
         }
-
+        setIsSubmitting(true);
         const templateParams = {
             from_firstname: formData.firstName,
             from_lastname: formData.secondName,
@@ -59,6 +60,8 @@ const ContactForm = () => {
             .catch((error) => {
                 setError('Something went wrong, please try again later.');
                 console.error(error);
+            }) .finally(() => {
+                setIsSubmitting(false);
             });
     };
 
@@ -160,10 +163,11 @@ const ContactForm = () => {
                 {/* Submit */}
                 <button
                     type="submit"
+                    disabled={isSubmitting}
                     
                     className="w-full bg-black text-white py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition"
                 >
-                    Submit
+                    {isSubmitting ? 'Sending...' : 'Submit'}
                 </button>
             </form>
             
