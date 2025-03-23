@@ -75,7 +75,7 @@ const AboutSec = () => {
                        <div
                           data-aos="fade-right"
                           data-aos-duration="1500"
-                       className='about-card w-full h-auto px-8  md:h-[25rem] py-[2rem] lg:px-[4rem] gap-9 bg-black border-2 border-white rounded-3xl lg:mr-[15rem] flex flex-col justify-center text-white'>
+                       className='about-card w-full h-auto px-8  md:h-[auto] py-[2rem] lg:px-[4rem] gap-9 bg-black border-2 border-white rounded-3xl lg:mr-[15rem] flex flex-col justify-center text-white'>
                            <div>
                            <h2 className='text-3xl md:text-6xl font-extrabold'>Why Choose Us?</h2>
                          </div> 

@@ -9,7 +9,7 @@ img{
     object-position: center;
     object-fit: contain;
 }
-@media (min-width: 820px){
+@media (min-width: 821px){
     #nav-button{
         display: none;
     }
