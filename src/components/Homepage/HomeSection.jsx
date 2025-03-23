@@ -6,6 +6,7 @@ import Typewriter from 'typewriter-effect';
 const HomeSection = () => {   
     
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 620);
+    
 
     // Handle screen resizing to determine whether to render video or image
     useEffect(() => {
@@ -59,7 +60,9 @@ const HomeSection = () => {
                   />
                 </div>
                 <div>
-                    <h1 className="text-4xl md:text-6xl font-bold text-center text-white ">
+                    <h1 
+                    translate='no'
+                    className="text-4xl md:text-6xl font-bold text-center text-white ">
                         <Typewriter
                           onInit={(typewriter) => {
                               typewriter
