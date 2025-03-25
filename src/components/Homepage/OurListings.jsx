@@ -1,8 +1,8 @@
 import React from 'react';
-import './our-proprties.css';
-import Navbar from '../Navbar/Navbar';
+import './our-lisitngs.css';
 
-const OurProprties = () => {
+
+const OurListings = () => {
     return (    
         <>
         <div className='flex flex-col pt-[35rem] sm:pt-[40rem] w-full items-center content-center'>
@@ -89,4 +89,4 @@ const OurProprties = () => {
         </>  );
 }
  
-export default OurProprties;
+export default OurListings;

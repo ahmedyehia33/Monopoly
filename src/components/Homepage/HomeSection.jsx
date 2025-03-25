@@ -21,11 +21,11 @@ const HomeSection = () => {
                      };
             }, []);
 
-    return ( 
-      <>
-      <div id="home-section"
-          className="relative h-[35rem] sm:h-[40rem] w-full flex items-center content-center justify-center overflow-hidden"
-      >
+ return ( 
+    <>
+        <div id="home-section"
+                 className="relative h-[35rem] sm:h-[40rem] w-full flex items-center content-center justify-center overflow-hidden"
+            >
             {/* Background Media */}
             {!isMobile ? (
                             <video
@@ -61,8 +61,8 @@ const HomeSection = () => {
                 </div>
                 <div>
                     <h1 
-                    translate='no'
-                    className="text-4xl md:text-6xl font-bold text-center text-white ">
+                        translate='no'
+                        className="text-4xl md:text-6xl font-bold text-center text-white ">
                         <Typewriter
                           onInit={(typewriter) => {
                               typewriter
@@ -81,10 +81,10 @@ const HomeSection = () => {
                           }}
                         />
                     </h1>
-              </div>
+                </div>
             </div>
         </div>
-        </> ); }
+    </>  ); }
                            
  
 export default HomeSection;

@@ -1,19 +1,17 @@
 import React from 'react';
-import './about.css';
 import { ImCheckmark2 } from "react-icons/im";
 import { GoGoal } from "react-icons/go";
 import { VscPinned } from "react-icons/vsc";
-import AboutSec from './AboutSec';
-
 
 const About = () => {
-    return (    <>
-                <div className='flex justify-center items-center w-full bg-white pt-[4rem] '>
-                    <div className='w-[94%] overflow-hidden rounded-3xl flex flex-col gap-6 justify-center items-center p-5'>
-                       <div 
+    return ( 
+        <>
+        <div className='w-full flex flex-col gap-10  items-center overflow-hidden pt-[5rem]'>
+        <div 
                        data-aos="fade-up"
-                       style={{background:'url(/SharjahCard.jpg)', backgroundPosition:'center', backgroundSize:'cover',backgroundRepeat:'no-repeat'}}
-                       className='rounded-3xl p-5 bg-white w-[100%] flex flex-col  items-center justify-center'>
+                       data-aos-duration="1500"
+                       style={{background:'url(/AboutCard.jpg)', backgroundPosition:'center', backgroundSize:'cover',backgroundRepeat:'no-repeat'}}
+                       className='rounded-3xl p-5 bg-white w-[94%] flex flex-col  items-center justify-center'>
                             <div className='w-full flex flex-col items-center justify-center md:flex-row'>
                             <div className='text-white text-4xl md:text-6xl font-extrabold flex flex-col items-center text-center  gap-1 md:gap-5'>
                               <span>  ABOUT </span>
@@ -27,11 +25,10 @@ const About = () => {
                                   <i>  your premier partner in navigating the vibrant property market of the UAE. </i>
                             </div>
                        </div>
-                       <div className='w-full flex flex-col md:flex-row items-center gap-5'>
-                          <div className='flex flex-col w-full md:w-[60%]  '>
-                          <div
+                       <div className='w-[94%]  grid grid-cols-1 gap-y-8 md:grid-cols-2 justify-center items-center'>
+                       <div
                           data-aos="fade-right"
-                       className='about-card w-full h-auto px-2  md:h-[25rem] py-[2rem] lg:px-[4rem] gap-9 bg-gradient-to-r from-white to-gray-300 border-2 border-white rounded-3xl lg:mr-[15rem] flex flex-col justify-center text-black'>
+                       className='about-card w-full h-auto px-2  md:h-[25rem] py-[2rem] lg:px-[4rem] gap-9 bg-white border-2 border-white rounded-3xl  flex flex-col justify-center text-black'>
                          <div>
                            <h2 className='text-3xl md:text-6xl font-extrabold '>Who We Are</h2>
                          </div> 
@@ -47,12 +44,12 @@ const About = () => {
                             <span className='font-medium text-xl'><i>Sales, Rentals, Property Management, and Investment Consultancy</i></span>
                           </div> 
                          </div>
-                          
                        </div>
                        <div
-                       data-aos="fade-right"
-                       className='w-full h-auto px-2  md:h-[25rem] py-[2rem] lg:px-[4rem] gap-9 bg-gradient-to-r from-white to-gray-400 border-2 border-white rounded-3xl lg:mr-[15rem] flex flex-col justify-center text-black'>
-                         <div>
+                          data-aos="fade-left"
+                          data-aos-duration="1500"
+                       className='about-card w-full h-auto px-8  md:h-[25rem] py-[2rem] lg:px-[4rem] gap-9 bg-black border-2 border-white rounded-3xl  flex flex-col justify-center text-white'>
+                           <div>
                            <h2 className='text-3xl md:text-6xl font-extrabold'>Our Mission</h2>
                          </div> 
                          <div className='flex flex-col gap-5'>
@@ -75,10 +72,11 @@ const About = () => {
                          </div>
                           
                         </div>
-                        <div
-                       data-aos="fade-right"
-                       className='w-full h-auto px-2  md:h-[25rem] py-[2rem] lg:px-[4rem] gap-9 bg-gradient-to-r from-white to-gray-400 border-2 border-white rounded-3xl lg:mr-[15rem] flex flex-col justify-center text-black'>
-                         <div>
+                       <div
+                          data-aos="fade-right"
+                          data-aos-duration="1500"
+                       className='about-card w-full h-auto px-8  md:h-[auto] py-[2rem] lg:px-[4rem] gap-9 bg-black border-2 border-white rounded-3xl lg:mr-[15rem] flex flex-col justify-center text-white'>
+                           <div>
                            <h2 className='text-3xl md:text-6xl font-extrabold'>Why Choose Us?</h2>
                          </div> 
                          <div className='flex flex-col gap-5'>
@@ -100,22 +98,18 @@ const About = () => {
                           </div> 
                          </div>
                           
-                       </div>        
-
-
-                          </div>
-                          <div 
+                       </div> 
+                       <div 
                           data-aos="fade-left"
-                          className='h-[20rem] w-full md:w-[35%] border-2 bg-gradient-to-l rounded-3xl from-white to-gray-300'>
+                          data-aos-duration="1500"
+                          className='h-[20rem] w-full md:w-[96%] bg-white rounded-3xl'>
                             <img src="/signature.png" className='w-full h-full' />
                           </div>
                        </div>
-                      
-                  
-                    </div>
-               </div>
-               <AboutSec/>
-                </>  );
+
+        </div>
+        </>
+     );
 }
  
 export default About;
