@@ -6,6 +6,7 @@
                   cursor: pointer;
                   border-radius: 1rem; 
                   overflow: hidden; 
+                  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
                 }
       
      
@@ -33,16 +34,21 @@
                               }
       
 #property-card1 {
-                  background-image: url('/proprties/villa.jpg');
+                  background-image: url('/proprties/studio.jpg');
                 }
       
 #property-card2 {
-                  background-image: url('/proprties/luxury.jpg');
+                  background-image: url('/proprties/oneBed.jpg');
                 }
       
 #property-card3 {
-                    background-image: url('/proprties/office.jpg');
+                    background-image: url('/proprties/twoBed.jpg');
                   } 
+
+#property-card4 {
+                    background-image: url('/proprties/threeBed.jpg');
+                  } 
+
 
 #about{
         border-radius: 86% 3% 5% 5% / 11% 10% 10% 10%;
