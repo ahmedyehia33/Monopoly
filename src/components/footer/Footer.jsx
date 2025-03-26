@@ -33,18 +33,18 @@ const Footer = () => {
                                 Follow us on
                             </div>  
                             <div id='footer-contact-info' className='flex w-full justify-center gap-4 md:gap-6'>
-                                <a href='https://www.facebook.com' target='_blank'>
+                                <div className="social-icon instagram flex items-center hover:cursor-pointer">
+                                    <span className='icon-container text-white bg-white rounded-xl h-[3rem] w-[3rem]'>
+                                        <img src='/socialMediaIcons/instagram.png' />
+                                    </span>
+                                </div>
+                                  <a href='https://www.facebook.com' target='_blank'>
                                     <div className="social-icon facebook flex items-center hover:cursor-pointer">
                                         <span className='icon-container text-white bg-white rounded-xl h-[3rem] w-[3rem]'>
                                             <img src='/socialMediaIcons/facebook.png' />
                                         </span>
                                     </div>
                                 </a>
-                                <div className="social-icon instagram flex items-center hover:cursor-pointer">
-                                    <span className='icon-container text-white bg-white rounded-xl h-[3rem] w-[3rem]'>
-                                        <img src='/socialMediaIcons/instagram.png' />
-                                    </span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -53,19 +53,23 @@ const Footer = () => {
                     <div className='w-full flex flex-col gap-3 md:flex-row md:justify-between md:items-center p-[2rem]'>
                         
                         {/* Left Side: Email & Address */}
-                        <div className='flex flex-col gap-2 md:w-[30%] text-white md:text-start font-medium text-lg'>
-                            <div className="flex items-center gap-2">
+                        <div className='flex flex-col gap-2 md:w-[50%] lg:w-[30%] text-white md:text-start font-medium text-lg'>
+                        <a href="https://wa.me/+971588697893?text=Hello May I Ask about my free session" target="_blank" rel="noopener noreferrer">
+                            <div className="flex w-full items-center gap-2">
                                 <MdEmail size={40} />
                                 <p>MonopolyPrime@gmail.com</p>
                             </div>
-                            <div className="flex items-center gap-2 text-sm">
-                                <MdLocationOn size={80} />
-                                <p>Sahara Healthcare City - Office 529 - 5th Floor - Al Nahda - Al Nahda 1 - Sharjah - UAE</p>
+                        </a>    
+                        <a href="https://wa.me/+971588697893?text=Hello May I Ask about my free session" target="_blank" rel="noopener noreferrer">
+                            <div className="flex w-full items-center gap-2 text-sm">
+                                <MdLocationOn size={50} />
+                                <p className='w-full md:w-[100%]'>Sahara Healthcare City - Office 529 - 5th Floor - Al Nahda - Al Nahda 1 - Sharjah - UAE</p>
                             </div>
+                        </a>    
                         </div>
 
                         {/* Right Side: WhatsApp & Phone */}
-                        <div className='flex flex-col gap-4 md:w-[30%] md:mr-[2rem] text-white md:text-end md:justify-end md:items-end font-medium text-lg'>
+                        <div className='flex flex-col w-full items-start gap-4 md:w-[30%] md:mr-[2rem] text-white md:text-end md:justify-end md:items-end font-medium text-lg'>
                             <a href="https://wa.me/+971588697893?text=Hello May I Ask about my free session" target="_blank" rel="noopener noreferrer">
                                 <div className="flex w-full justify-center md:justify-end items-center gap-2">
                                     <FaWhatsappSquare size={40} />
@@ -73,7 +77,7 @@ const Footer = () => {
                                 </div>
                             </a>    
                             <a href="tel:+97165797908" className='w-full'>
-                                <div className="flex w-full justify-center md:justify-end items-center gap-2">
+                                <div className="flex w-full justify-start md:justify-end items-center gap-2">
                                     <IoCall size={40} />
                                     <div>+97165797908</div>
                                 </div>
@@ -81,7 +85,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Footer Links */}
+                   
                     
                 </div>
             </div>

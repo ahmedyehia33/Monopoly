@@ -26,7 +26,7 @@ const OurListings = () => {
                          <a href='https://www.bayut.com/companies/monopoly-prime-properties-105666/?category=residential&beds=0&activeTab=active_listings' target='_blank'>
                             <div className='flex items-center  justify-center '>
                                 <div 
-                                className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[15rem]  flex flex-col items-start content-start p-5 rounded-lg"
+                                className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[18rem] lg:w-[13.5rem]  flex flex-col items-start content-start p-5 rounded-lg"
                                 id='property-card1'>
                                     <p className='text-3xl font-semibold'>
                                         Studio
@@ -37,7 +37,7 @@ const OurListings = () => {
                         <a href='https://www.bayut.com/companies/monopoly-prime-properties-105666/?category=residential&beds=1&activeTab=active_listings' target='_blank'  rel="noreferrer"> 
                             <div className='flex items-center  justify-center '>
                                     <div
-                                    className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[15rem] flex flex-col items-start content-start p-2 rounded-lg " 
+                                    className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[18rem] lg:w-[13.5rem] flex flex-col items-start content-start p-5 rounded-lg " 
                                     id='property-card2'>
                                         <p className='text-3xl font-semibold'>
                                             One Bed
@@ -49,7 +49,7 @@ const OurListings = () => {
                         <a href='https://www.bayut.com/companies/monopoly-prime-properties-105666/?category=residential&beds=2&activeTab=active_listings' target='_blank'>
                             <div className='flex items-center  justify-center '>
                                 <div 
-                                className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[15rem] flex flex-col items-start content-start p-5 rounded-lg " 
+                                className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[18rem] lg:w-[13.5rem] flex flex-col items-start content-start p-5 rounded-lg " 
                                 id='property-card3'>
                                     <p className='text-3xl font-semibold'>
                                         Two Bed
@@ -61,9 +61,9 @@ const OurListings = () => {
                         <a href='https://www.bayut.com/companies/monopoly-prime-properties-105666/?category=residential&beds=3&activeTab=active_listings' target='_blank'>
                             <div className='flex items-center  justify-center '>
                                 <div 
-                                className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[15rem] flex flex-col items-start content-start p-5 rounded-lg "
+                                className="property-card text-white h-[15rem] w-[12rem] md:h-[20rem] md:w-[18rem] lg:w-[13.5rem] flex flex-col items-start content-start p-5 rounded-lg "
                                 id='property-card4'>
-                                    <p className='text-2xl font-semibold'>
+                                    <p className='text-3xl font-semibold'>
                                         Three Bed
                                     </p>
                                     

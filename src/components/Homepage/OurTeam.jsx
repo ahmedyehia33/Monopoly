@@ -107,8 +107,8 @@ const OurTeam = () => {
                                                 modifier: 1,
                                                 slideShadows: false,
                                               }}
-                                              breakpoints={{640: {
-                                                              slidesPerView: 1,
+                                              breakpoints={{580: {
+                                                              slidesPerView: 2,
                                                             },  
                                                             768: {
                                                               slidesPerView: 2,
