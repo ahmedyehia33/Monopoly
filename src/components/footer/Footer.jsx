@@ -55,13 +55,13 @@ const Footer = () => {
                         {/* Left Side: Email & Address */}
                         <div className='flex flex-col gap-2 md:w-[50%] lg:w-[30%] text-white md:text-start font-medium text-lg'>
                         <a href="https://wa.me/+971588697893?text=Hello May I Ask about my free session" target="_blank" rel="noopener noreferrer">
-                            <div className="flex w-full items-center gap-2">
+                            <div className="flex w-full items-center gap-2 ml-2">
                                 <MdEmail size={40} />
                                 <p>MonopolyPrime@gmail.com</p>
                             </div>
                         </a>    
-                        <a href="https://wa.me/+971588697893?text=Hello May I Ask about my free session" target="_blank" rel="noopener noreferrer">
-                            <div className="flex w-full items-center gap-2 text-sm">
+                        <a href="https://maps.app.goo.gl/Eegoixx5bZYxj55J9" target="_blank" rel="noopener noreferrer">
+                            <div className="flex w-full items-center gap-2 text-sm ml-2">
                                 <MdLocationOn size={50} />
                                 <p className='w-full md:w-[100%]'>Sahara Healthcare City - Office 529 - 5th Floor - Al Nahda - Al Nahda 1 - Sharjah - UAE</p>
                             </div>
@@ -71,13 +71,13 @@ const Footer = () => {
                         {/* Right Side: WhatsApp & Phone */}
                         <div className='flex flex-col w-full items-start gap-4 md:w-[30%] md:mr-[2rem] text-white md:text-end md:justify-end md:items-end font-medium text-lg'>
                             <a href="https://wa.me/+971588697893?text=Hello May I Ask about my free session" target="_blank" rel="noopener noreferrer">
-                                <div className="flex w-full justify-center md:justify-end items-center gap-2">
+                                <div className="flex w-full justify-center md:justify-end items-center gap-2 ml-2">
                                     <FaWhatsappSquare size={40} />
                                     <div>+971588697893</div>
                                 </div>
                             </a>    
                             <a href="tel:+97165797908" className='w-full'>
-                                <div className="flex w-full justify-start md:justify-end items-center gap-2">
+                                <div className="flex w-full justify-start md:justify-end items-center gap-2 ml-2">
                                     <IoCall size={40} />
                                     <div>+97165797908</div>
                                 </div>
