@@ -7,7 +7,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Navigation,EffectCoverflow } from "swiper/modules";
-import offset from 'dom-helpers/esm/offset';
+//import offset from 'dom-helpers/esm/offset';
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 import { IoArrowBack } from "react-icons/io5";
