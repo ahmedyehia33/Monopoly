@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import emailjs from '@emailjs/browser';
+import { useOutletContext } from "react-router-dom";
 
 const ContactForm = () => {
+    const { selectedLanguage } = useOutletContext();
     const [formData, setFormData] = useState({
                                                 firstName: '',
                                                 secondName: '',
@@ -74,26 +76,26 @@ const ContactForm = () => {
                 {/* Row 1 - First & Last Name */}
                 <div className="flex flex-col md:flex-row gap-6">
                     <div className="flex-1">
-                        <label className="block text-base font-semibold mb-2">First Name</label>
+                        <label className="block text-base font-semibold mb-2">{selectedLanguage?"First Name":"الاسم الاول"}</label>
                         <input
                             type="text"
                             name="firstName" 
                             value={formData.firstName}
                             onChange={handleChange}
                             required
-                            placeholder="Enter your first name"
+                            placeholder={selectedLanguage?"Enter your first name" : "ادخل اسمك الاول"}
                             className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
                     <div className="flex-1">
-                        <label className="block text-base font-semibold mb-2">Second Name</label>
+                        <label className="block text-base font-semibold mb-2">{selectedLanguage?"Second Name" :"الاسم الثاني"}</label>
                         <input
                             type="text"
                             name="secondName" 
                             value={formData.secondName}
                             onChange={handleChange}
                             required
-                            placeholder="Enter your last name"
+                            placeholder={selectedLanguage?"Enter your last name" : "ادخل اسمك الثاني"}
                             className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                     </div>
@@ -101,7 +103,7 @@ const ContactForm = () => {
 
                 {/* Row 2 - Email */}
                 <div>
-                    <label className="block text-base font-semibold mb-2">Email Address</label>
+                    <label className="block text-base font-semibold mb-2">{selectedLanguage?"Email Address" : "عنوان البريد الاليكتروني"}</label>
                     <input
                     type="email"
                     name="email" 
@@ -115,7 +117,7 @@ const ContactForm = () => {
 
                 {/* Row 3 - Phone */}
                 <div>
-                    <label className="block text-base font-semibold mb-2">Phone Number</label>
+                    <label className="block text-base font-semibold mb-2">{selectedLanguage? "Phone Number" : "رقم التليفون"}</label>
                     <input
                     type="tel"
                     name="phone" 
@@ -128,9 +130,9 @@ const ContactForm = () => {
 
                 {/* Row 4 - Preferred Communication */}
                 <div>
-                    <label className="block text-base font-semibold mb-3">How would you like to communicate?</label>
+                    <label className="block text-base font-semibold mb-3">{selectedLanguage?"How would you like to communicate?" :"كيف تريد ان تتواصل ؟"}</label>
                     <div className="flex gap-6 flex-wrap">
-                        {['Email', 'WhatsApp', 'Phone Call'].map((method) => (
+                        {(selectedLanguage? ['Email', 'WhatsApp', 'Phone Call'] : ['بريد الكتروني' , "واتساب" , "مكالمة هاتفية"]).map((method) => (
                             <label key={method} className="flex items-center gap-2">
                                 <input
                                     type="checkbox"
@@ -156,7 +158,7 @@ const ContactForm = () => {
                 {/* Success Message */}
                 {success && (
                     <div className="bg-green-100 text-green-700 px-4 py-3 rounded-lg animate-fadeIn">
-                        Thank you for your time, we will contact you as soon as possible.
+                        {selectedLanguage? "Thank you for your time, we will contact you as soon as possible." : "شكرا علي وقتك ، سوف نقوم بالتواصل معك م في اقرب وقت "}
                     </div>
                 )}
 
@@ -167,7 +169,7 @@ const ContactForm = () => {
                     
                     className="w-full bg-black text-white py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition"
                 >
-                    {isSubmitting ? 'Sending...' : 'Submit'}
+                    {selectedLanguage? (isSubmitting ? 'Sending...' : 'Submit')  : ( isSubmitting? "يرسل" : "ارسال") }
                 </button>
             </form>
             

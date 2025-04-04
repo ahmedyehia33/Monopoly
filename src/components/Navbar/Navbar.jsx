@@ -5,8 +5,10 @@ import { GrServices } from "react-icons/gr";
 import { BsFillInfoSquareFill } from "react-icons/bs";
 import { IoCallOutline } from "react-icons/io5";
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { MdLanguage } from "react-icons/md";
 
-const Navbar = () => {
+const Navbar = ({selectedLanguage , setSelectedLanguage}) => {
+    
     const [open, setOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(true); // Navbar visibility
     const [lastScrollY, setLastScrollY] = useState(0); // Track last scroll position
@@ -46,7 +48,9 @@ const Navbar = () => {
             setBg('black')
           }
       },[location.pathname])
-    
+    const handleSelectedLanguage =()=>{
+      setSelectedLanguage(!selectedLanguage)
+    }
   
     return ( 
             <>
@@ -63,24 +67,31 @@ const Navbar = () => {
                 <div id='nav-items' className='flex gap-4 mr-4 items-center justify-end  text-center w-[80%] h-[99%]'>
                 <NavLink to='/' className={({ isActive }) => (isActive ? "text-gray-600" : "")}>
                     <div className='h-full w-[auto] min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
-                   <span className='mr-2'> <IoHome  size={25} /></span> <h2 className='w-full text-2xl '> Home</h2>                        
+                   <span className='mr-2'> <IoHome  size={25} /></span> <h2 className='w-full text-2xl '> {selectedLanguage? 'Home' : 'الرئيسية'}</h2>                        
                     </div>
                     </NavLink>
                     <NavLink to='services' className={({ isActive }) => (isActive ? "text-gray-600" : "")}>
                     <div className='h-full w-[auto] mr-4 min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
-                   <span className='mr-2'><GrServices  size={25} /></span> <h2 className='w-full text-2xl '> Services</h2>                        
+                   <span className='mr-2'><GrServices  size={25} /></span> <h2 className='w-full text-2xl '> {selectedLanguage? 'Services' : 'خدماتنا'}</h2>                        
                     </div>
                     </NavLink>
                     <NavLink to='about' className={({ isActive }) => (isActive ? "text-gray-600" : "")}>
                     <div className='h-full w-[auto] mr-4 min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
-                   <span className='mr-2'><BsFillInfoSquareFill  size={25} /></span> <h2 className='w-full text-2xl '> About</h2>                        
+                   <span className='mr-2'><BsFillInfoSquareFill  size={25} /></span> <h2 className='w-full text-2xl '> {selectedLanguage? 'About' : 'من نحن' }</h2>                        
                     </div>
                     </NavLink>
                     <NavLink to='contact' className={({ isActive }) => (isActive ? "text-gray-600" : "")}>
                     <div className='h-full w-[auto]  min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
-                   <span className='mr-2'><IoCallOutline  size={25} /></span> <h2 className='w-full text-2xl '> Contact</h2>                        
+                   <span className='mr-2'><IoCallOutline  size={25} /></span> <h2 className='w-full text-2xl '> {selectedLanguage? 'Contact' :'تواصل معنا'}</h2>                        
                     </div>
                     </NavLink>
+                   
+                    <div
+                    onClick={handleSelectedLanguage} 
+                    className='h-full w-[auto]  min-w-[6rem] flex items-center content-center hover:bg-none  rounded-md hover:text-gray-600 hover:cursor-pointer'>
+                   <span className='mr-2'><MdLanguage  size={25} /></span> <h2 className='w-full text-2xl '> {selectedLanguage ? 'العربية' : 'English'}</h2>                        
+                    </div>
+                    
                 </div>
                 <div id='nav-button' className='h-[50%] w-[3rem] flex  border-2 border-white rounded-full' onClick={()=>setOpen(!open)}>
                     {open? ( <div className='w-full h-full text-center text-3xl flex pt-1 items-center justify-center'>
@@ -102,7 +113,7 @@ const Navbar = () => {
                           <div className=' w-[full] border-b border-white pb-[2rem] flex items-center justify-center hover:bg-none  rounded-md  hover:cursor-pointer'>
                             <div className='flex ' 
                             data-aos="fade-left"
-                            data-aos-delay="100"> <span className='mr-2'> <IoHome  size={25} /></span> <h2 className='w-full text-2xl '> Home</h2></div>                     
+                            data-aos-delay="100"> <span className='mr-2'> <IoHome  size={25} /></span> <h2 className='w-full text-2xl '> {selectedLanguage? 'Home' : 'الرئيسية'}</h2></div>                     
                           </div>
                         </NavLink>
                         <NavLink to='services' className={({ isActive }) => (isActive ? "text-gray-600" : "")}
@@ -112,7 +123,7 @@ const Navbar = () => {
                           <div className=' w-[full] border-b border-white pb-[2rem] flex items-center justify-center hover:bg-none  rounded-md  hover:cursor-pointer'>
                             <div className='flex'
                             data-aos="fade-left"
-                            data-aos-delay="200"> <span className='mr-2'> <GrServices  size={25} /></span> <h2 className='w-full text-2xl '> Services</h2></div>                     
+                            data-aos-delay="200"> <span className='mr-2'> <GrServices  size={25} /></span> <h2 className='w-full text-2xl '> {selectedLanguage? 'Services' : 'خدماتنا'}</h2></div>                     
                           </div>
                         </NavLink>
                         <NavLink to='about' className={({ isActive }) => (isActive ? "text-gray-600" : "")}
@@ -122,19 +133,29 @@ const Navbar = () => {
                           <div className=' w-[full] border-b border-white pb-[2rem] flex items-center justify-center hover:bg-none  rounded-md  hover:cursor-pointer'>
                             <div className='flex'
                             data-aos="fade-left"
-                            data-aos-delay="300"> <span className='mr-2'> <BsFillInfoSquareFill  size={25} /></span> <h2 className='w-full text-2xl '> About</h2></div>                     
+                            data-aos-delay="300"> <span className='mr-2'> <BsFillInfoSquareFill  size={25} /></span> <h2 className='w-full text-2xl '> {selectedLanguage? 'About' : 'من نحن' }</h2></div>                     
                           </div>
                         </NavLink>
                         <NavLink to='contact' className={({ isActive }) => (isActive ? "text-gray-600 " : "")}
                             onClick={()=> {setOpen(false)
                               setIsVisible(true)}}
                         >
-                          <div className=' w-[full]  pb-[2rem] flex items-center justify-center hover:bg-none  rounded-md  hover:cursor-pointer'>
+                          <div className=' w-[full] border-b border-white pb-[2rem] flex items-center justify-center hover:bg-none  rounded-md  hover:cursor-pointer'>
                             <div className='flex'
                             data-aos="fade-left"
-                            data-aos-delay="400"> <span className='mr-2'> <IoCallOutline  size={25} /></span> <h2 className='w-full text-2xl '> Contact</h2></div>                     
+                            data-aos-delay="400"> <span className='mr-2'> <IoCallOutline  size={25} /></span> <h2 className='w-full text-2xl '> {selectedLanguage? 'Contact' :'تواصل معنا'}</h2></div>                     
                           </div>
                         </NavLink>
+                        <div
+                        onClick={()=> {
+                          handleSelectedLanguage()
+                          setOpen(false)
+                        }} 
+                        className=' w-[full]  pb-[2rem] flex items-center justify-center hover:bg-none  rounded-md  hover:cursor-pointer'>
+                            <div className='flex'
+                            data-aos="fade-left"
+                            data-aos-delay="450"> <span className='mr-2'> <MdLanguage  size={25} /></span> <h2 className='w-full text-2xl '> {selectedLanguage ? 'العربية' : 'English' }</h2></div>                     
+                          </div>
 
                      </div>) : null}
             </>

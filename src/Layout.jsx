@@ -9,6 +9,7 @@ import Preloader from './components/Preloader/Preloader';
 import { motion } from 'framer-motion';
 
 const Layout = () => {
+  const [selectedLanguage , setSelectedLanguage] = useState(true)
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(false);
   const isFirstLoad = useRef(true);
@@ -45,9 +46,13 @@ const Layout = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <ScrollToTop />
-          <Navbar />
-          <Outlet />
-          <Footer />
+          <Navbar 
+          selectedLanguage={selectedLanguage} 
+          setSelectedLanguage={setSelectedLanguage} 
+          />
+          <Outlet 
+          context={{ selectedLanguage, setSelectedLanguage }}/>
+          <Footer selectedLanguage={selectedLanguage}/>
         </motion.div>
       )}
     </>

@@ -1,64 +1,11 @@
 import React, { useMemo, useState, useRef } from 'react';
 import { motion } from "framer-motion";
 import "./work-two.css";
+import {cardsData , cardsDataArabic } from "../../index";
 
-const WorkWithUs = () => {
+const WorkWithUs = ({selectedLanguage}) => {
     const [expandedID , setExpandedID] = useState([]);
-    const cardsData =useMemo(()=>[{
-                    id:1,
-                    header:"Expertise in Dubai Real Estate Market",
-                    content:"With deep knowledge of the local market, we offer tailored advice and solutions for buyers, sellers, and investors, ensuring your real estate journey is seamless and profitable.",
-                    img:"/workcards2/workcard1.jpg"
-                    
-                    },
-                {
-                    id:2,
-                    header:"Customer-Centric Approach",
-                    content:"Your goals are our priority. We focus on understanding your needs and providing personalized services to help you find the perfect property or investment.",
-                    img:"/workcards2/workcard2.jpg"
-                    
-                    },
-                {
-                    id:3,
-                    header:"Transparency and Trust",
-                    content:"We believe in building long-term relationships with our clients through honesty, integrity, and full transparency in all our transactions.",
-                    img:"/workcards2/workcard3.jpg"
-                    
-                    },
-                {
-                    id:4,
-                    header:"Innovative Solutions",
-                    content:"Leveraging cutting-edge technology and data analytics, we provide insights that give you a competitive advantage, whether you’re buying, selling, or investing.",
-                    img:"/workcards2/workcard4.jpg"
-                    
-                    },
-                {
-                    id:5,
-                    header:"Wide Network of opportunities",
-                    content:"We connect you to an extensive portfolio of properties, from luxury apartments in Dubai to emerging investment opportunities across the Emirates.",
-                    img:"/workcards2/workcard5.jpg"
-                    
-                    },
-                {
-                    id:6,
-                    header:"Growth Potential",
-                    content:"Partnering with us means joining a company that’s on the rise. As a startup, we’re agile, forward-thinking, and focused on creating value for our clients and investors.",
-                    img:"/workcards2/workcard6.jpg"
-                    
-                    },
-                {
-                    id:7,
-                    header:"Sustainability Focus",
-                    content:"We are committed to promoting sustainable real estate practices, helping you invest in properties that align with environmental and societal goals.",
-                    img:"/workcards2/workcard7.jpg"
-                    
-                    },
-                {
-                    id:8,
-                    header:"Your success is our success",
-                    content:"We measure our success by how well we help you achieve your real estate goals. Your satisfaction drives everything we do.",
-                    img:"/workcards2/workcard8.jpg"
-                }],[])
+    
     const textTrimmer=(text)=>{
                 return text.length > 50 ? `${text.slice(0,80)}....`: text
     }
@@ -71,12 +18,16 @@ const WorkWithUs = () => {
                 <div 
                 data-aos="fade-right"
                 className='w-full text-center flex-col justify-center mb-5'>
-                            <h1 className='text-3xl sm:text-5xl md:text-8xl tracking-wide sm:tracking-wider pt-4 font-medium md:font-thin pl-4'>
+                           {selectedLanguage? 
+                           <h1 className='text-3xl sm:text-5xl md:text-8xl tracking-wide sm:tracking-wider pt-4 font-medium md:font-thin pl-4'>
                             Why Work <span className='text-white font-extrabold'>with</span> Us?
-                            </h1>
+                            </h1>:
+                            <h1 className='text-3xl sm:text-5xl md:text-8xl tracking-wide sm:tracking-wider pt-4 font-medium md:font-thin pl-4'>
+                            لماذا تعمل <span className='text-white font-extrabold'>معنا</span> 
+                            </h1>}
                         </div>
                 <div id='work-cards-container' className='w-full flex flex-col overflow-x-hidden gap-2 sm:grid sm:grid-cols-2 md:gap-5 md:px-[3.5rem] items-center content-center'>
-                    {cardsData.map((card)=>
+                    {(selectedLanguage? cardsData : cardsDataArabic).map((card)=>
                        (
                             <div key={card.id} className='card w-full h-[auto]   flex flex-col justify-center items-center md:flex-col lg:flex-row gap-1 ' >   
                                 <div 

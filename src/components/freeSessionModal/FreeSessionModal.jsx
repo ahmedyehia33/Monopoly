@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useOutletContext } from "react-router-dom";
+
 
 const FreeSessionModal = ({ show, onClose, onBookNow }) => {
+    const { selectedLanguage } = useOutletContext();
     return (
         <AnimatePresence>
             {show && (
@@ -18,20 +21,22 @@ const FreeSessionModal = ({ show, onClose, onBookNow }) => {
                         exit={{ scale: 0.8, opacity: 0 }}
                         transition={{ duration: 0.3 }}
                     >
-                        <h2 className="text-2xl font-bold mb-4">🎉 Free Session Offer!</h2>
-                        <p className="mb-6 text-gray-600">Schedule your free session with one of our brokers today!</p>
+                        <h2 className="text-2xl font-bold mb-4">{selectedLanguage? "🎉 Free Session Offer!" : "🎉عرض جلسة مجانية!"}</h2>
+                        <p className="mb-6 text-gray-600">{selectedLanguage? 
+                        "Schedule your free session with one of our brokers today!" :
+                        "حدد جلسة مجانية مع أحد وسطائنا اليوم!"}</p>
                         <div className="flex justify-center gap-4">
                             <button 
                                 onClick={onBookNow} 
                                 className="bg-gold text-white px-6 py-2 rounded hover:opacity-90 transition"
                             >
-                                Book Now
+                                {selectedLanguage? "Book Now" : "احجزالان"}
                             </button>
                             <button 
                                 onClick={onClose} 
                                 className="bg-gray-700 text-white px-6 py-2 rounded hover:opacity-90 transition"
                             >
-                                Book Later
+                               {selectedLanguage? "Book Later" : "احجز لاحقا"}
                             </button>
                         </div>
                     </motion.div>

@@ -5,7 +5,7 @@ import { MdEmail, MdLocationOn } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
 import { Link, useLocation } from 'react-router-dom';
 
-const Footer = () => {
+const Footer = ({selectedLanguage}) => {
     const location = useLocation();
     
     const handleClick = () => {
@@ -30,7 +30,7 @@ const Footer = () => {
                         </div>
                         <div className='flex flex-col justify-center items-center md:mr-[3rem]'>
                             <div className='w-full text-2xl font-extrabold text-center mb-2'>
-                                Follow us on
+                                {selectedLanguage? "Follow us on" : "تابعنا علي"}
                             </div>  
                             <div id='footer-contact-info' className='flex w-full justify-center gap-4 md:gap-6'>
                                 <div className="social-icon instagram flex items-center hover:cursor-pointer">
@@ -63,7 +63,12 @@ const Footer = () => {
                         <a href="https://maps.app.goo.gl/Eegoixx5bZYxj55J9" target="_blank" rel="noopener noreferrer">
                             <div className="flex w-full items-center gap-2 text-sm ml-2">
                                 <MdLocationOn size={50} />
-                                <p className='w-full md:w-[100%]'>Sahara Healthcare City - Office 529 - 5th Floor - Al Nahda - Al Nahda 1 - Sharjah - UAE</p>
+                                <p className='w-full md:w-[100%]'>
+                                    {selectedLanguage? 
+                                    "Sahara Healthcare City - Office 529 - 5th Floor - Al Nahda - Al Nahda 1 - Sharjah - UAE":
+                                    
+"مدينة صحارى للرعاية الصحية - مكتب 529 - الطابق الخامس - النهدة - النهدة 1 - الشارقة - الإمارات العربية المتحدة"}
+                                </p>
                             </div>
                         </a>    
                         </div>

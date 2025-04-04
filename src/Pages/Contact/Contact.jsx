@@ -3,9 +3,11 @@ import './contact.css'
 import ContactForm from '../../components/contact-form/ContactFrom';
 import FreeSessionModal from '../../components/freeSessionModal/FreeSessionModal';
 import ContactInfo from './ContactInfo';
+import { useOutletContext } from "react-router-dom";
 
 const Contact = () => {
     const [showModal, setShowModal] = useState(true);
+    const { selectedLanguage } = useOutletContext();
 
     const handleBookNow = () => {
         setShowModal(false);
@@ -27,7 +29,7 @@ const Contact = () => {
             <div  className='w-full rounded-b-3xl grid grid-cols-1 md:grid-cols-2 '>
                 <div className=' h-full flex items-center mt-12 justify-center md:items-center md:mb-0 md:justify-start '>
                     <h2 className=' w-full text-6xl md:text-7xl lg:text-8xl font-extrabold  rounded-3xl p-10 italic  text-center'>
-                        Let's <br/> Connect
+                        {selectedLanguage ?"Let's" : "دعونا"} <br/> {selectedLanguage? "Connect" : "نتواصل"}
                     </h2>
                 </div>
                 <div className='py-8'>

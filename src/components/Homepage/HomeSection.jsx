@@ -3,7 +3,11 @@ import './home-section.css';
 import Typewriter from 'typewriter-effect';
 
 
-const HomeSection = () => {   
+const HomeSection = ({selectedLanguage}) => {   
+    const [key, setKey] = useState(0); //
+    useEffect(() => {
+        setKey((prevKey) => prevKey + 1); // ✅ Force re-run Typewriter when language changes
+      }, [selectedLanguage]);
     
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 620);
     
@@ -59,29 +63,39 @@ const HomeSection = () => {
                       className="w-full  h-[100%]"
                   />
                 </div>
-                <div>
-                    <h1 
-                        translate='no'
-                        className="text-4xl md:text-6xl font-bold text-center text-white ">
-                        <Typewriter
-                          onInit={(typewriter) => {
-                              typewriter
-                                  .typeString(
-                                      'Welcome to <span class="monopoly">MONOPOLY prime</span> '
-                                  )
-                                  .pauseFor(1500)
-                                  .deleteAll()
-                                  .typeString('Where Vision Meets Property.')
-                                  .pauseFor(1500)
-                                  .start();
-                          }}
-                          options={{
-                              loop: true, // This makes the typing effect loop
-                              delay: 75, // Adjust typing speed (in ms)
-                          }}
-                        />
-                    </h1>
-                </div>
+                <div key={key}> {/* ✅ Re-render Typewriter when key changes */}
+  <h1 translate="no" className="text-4xl md:text-6xl font-bold text-center text-white">
+    <Typewriter
+      onInit={(typewriter) => {
+        typewriter
+          .typeString(selectedLanguage 
+            ? "Welcome to <span class='monopoly'>MONOPOLY prime</span>" 
+            : ""
+          )
+          .pasteString(!selectedLanguage 
+            ? "مرحبا في <span class='monopoly'>مونوبلي برايم</span>" 
+            : ""
+          )
+          .pauseFor(1500)
+          .deleteAll()
+          .typeString(selectedLanguage 
+            ? "Where Vision Meets Property." 
+            : ""
+          )
+          .pasteString(!selectedLanguage 
+            ? "حيث تتلاقى الرؤية مع الطموح" 
+            : ""
+          )
+          .pauseFor(2500)
+          .start();
+      }}
+      options={{
+        loop: true,
+        delay: 75,
+      }}
+    />
+  </h1>
+</div>
             </div>
         </div>
     </>  ); }
